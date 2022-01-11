@@ -1,0 +1,1 @@
+no c: Class | c = c.ext

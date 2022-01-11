@@ -1,0 +1,1 @@
+no n: Node | n = n.nxt

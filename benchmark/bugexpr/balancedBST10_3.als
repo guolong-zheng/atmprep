@@ -1,0 +1,1 @@
+ all n1, n2: Node { (Depth[n1] - Depth[n2] <= 1) or (#(Depth[n1] - Depth[n2]) = 0) iff (HasAtMostOneChild[n1] and HasAtMostOneChild[n2] and (Depth[n1] >= Depth[n2])) }

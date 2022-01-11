@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view nodetheme="Martha" edgetheme="Standard">
+
+<projection> <holeType name="State"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <holeType name="Int"/>
+   <holeType name="State"/>
+   <holeType name="univ"/>
+   <holeType name="seq/Int"/>
+   <set name="$Game1_finalState" holeType="State"/>
+   <set name="First" holeType="states/Ord"/>
+   <set name="Last" holeType="states/Ord"/>
+   <set name="Prev" holeType="states/Ord"/>
+</node>
+
+<node samerank="yes" shape="Triangle" color="Black">
+   <holeType name="Stake"/>
+</node>
+
+<node shape="Ellipse">
+   <holeType name="Disc"/>
+</node>
+
+<node visible="no">
+   <holeType name="discs/Ord"/>
+   <holeType name="stakes/Ord"/>
+   <holeType name="states/Ord"/>
+   <set name="Next" holeType="states/Ord"/>
+</node>
+
+<edge label="">
+   <relation name="on"> <holeType name="Disc"/> <holeType name="Stake"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

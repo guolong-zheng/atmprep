@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<projection> <holeType name="Time"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node hideunconnected="yes" shape="Ellipse">
+   <holeType name="Card"/>
+</node>
+
+<node visible="no">
+   <holeType name="timeOrder/Ord"/>
+</node>
+
+<node visible="no" label="K">
+   <holeType name="Key"/>
+</node>
+
+<edge visible="no" attribute="yes">
+   <relation name="fst"> <holeType name="Card"/> <holeType name="Key"/> </relation>
+   <relation name="issued"> <holeType name="Desk"/> <holeType name="Key"/> </relation>
+   <relation name="key"> <holeType name="Room"/> <holeType name="Key"/> </relation>
+   <relation name="prev"> <holeType name="Desk"/> <holeType name="Room"/> <holeType name="Key"/> </relation>
+   <relation name="snd"> <holeType name="Card"/> <holeType name="Key"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

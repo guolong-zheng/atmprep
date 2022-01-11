@@ -1,0 +1,1 @@
+all n1, n2 : Node | n1 != n2 =>{ n1.nxt = n2 <=> n2.pre = n1}

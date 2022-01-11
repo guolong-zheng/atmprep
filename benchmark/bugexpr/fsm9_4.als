@@ -1,0 +1,1 @@
+all s:State | FSM.stop.*transition = s

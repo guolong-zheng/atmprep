@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<projection> <holeType name="Time"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node hideunconnected="yes" shape="Circle">
+   <holeType name="Event"/>
+</node>
+
+<node shape="Ellipse">
+   <holeType name="Guest"/>
+</node>
+
+<node showlabel="no">
+   <set name="First" holeType="to/Ord"/>
+   <set name="Last" holeType="to/Ord"/>
+   <set name="Next" holeType="to/Ord"/>
+   <set name="Prev" holeType="to/Ord"/>
+</node>
+
+<node visible="no">
+   <holeType name="ko/Ord"/>
+   <holeType name="to/Ord"/>
+   <set name="$e" holeType="univ"/>
+   <set name="$e" holeType="Event"/>
+   <set name="$k" holeType="univ"/>
+   <set name="$k" holeType="Key"/>
+</node>
+
+<node visible="no" hideunconnected="yes">
+   <holeType name="Key"/>
+</node>
+
+<node visible="yes" hideunconnected="no">
+   <set name="pre" holeType="Event"/>
+</node>
+
+<edge visible="no">
+   <relation name="First"> <holeType name="ko/Ord"/> <holeType name="Key"/> </relation>
+   <relation name="Last"> <holeType name="ko/Ord"/> <holeType name="Key"/> </relation>
+   <relation name="Next"> <holeType name="ko/Ord"/> <holeType name="Key"/> <holeType name="Key"/> </relation>
+   <relation name="Prev"> <holeType name="ko/Ord"/> <holeType name="Key"/> <holeType name="Key"/> </relation>
+</edge>
+
+<edge visible="no" attribute="yes">
+   <relation name="currentKey"> <holeType name="Room"/> <holeType name="Key"/> </relation>
+   <relation name="guest"> <holeType name="Event"/> <holeType name="Guest"/> </relation>
+   <relation name="key"> <holeType name="RoomKeyEvent"/> <holeType name="Key"/> </relation>
+   <relation name="keys"> <holeType name="Guest"/> <holeType name="Key"/> </relation>
+   <relation name="keys"> <holeType name="Room"/> <holeType name="Key"/> </relation>
+   <relation name="lastKey"> <holeType name="FrontDesk"/> <holeType name="Room"/> <holeType name="Key"/> </relation>
+   <relation name="occupant"> <holeType name="FrontDesk"/> <holeType name="Room"/> <holeType name="Guest"/> </relation>
+   <relation name="room"> <holeType name="RoomKeyEvent"/> <holeType name="Room"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

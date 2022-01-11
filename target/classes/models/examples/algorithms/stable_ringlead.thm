@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view nodetheme="Martha" edgetheme="Standard">
+
+<projection> <holeType name="State"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <holeType name="Int"/>
+   <holeType name="State"/>
+   <holeType name="univ"/>
+   <holeType name="seq/Int"/>
+   <set name="$ConvergingRun_t" holeType="State"/>
+   <set name="First" holeType="so/Ord"/>
+   <set name="Last" holeType="so/Ord"/>
+   <set name="Next" holeType="so/Ord"/>
+   <set name="Prev" holeType="so/Ord"/>
+</node>
+
+<node color="Blue">
+   <set name="running" holeType="Process"/>
+</node>
+
+<node color="Gray">
+   <holeType name="Val"/>
+</node>
+
+<node shape="Ellipse" color="Green">
+   <holeType name="Process"/>
+</node>
+
+<node visible="no">
+   <holeType name="po/Ord"/>
+   <holeType name="so/Ord"/>
+   <holeType name="vo/Ord"/>
+</node>
+
+<edge color="Gray" weight="10" label="next">
+   <relation name="nextVal"> <holeType name="Val"/> <holeType name="Val"/> </relation>
+</edge>
+
+<edge color="Green" label="right">
+   <relation name="rightNeighbor"> <holeType name="Process"/> <holeType name="Process"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

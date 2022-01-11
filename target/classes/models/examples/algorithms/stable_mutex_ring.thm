@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view nodetheme="Martha" edgetheme="Standard">
+
+<projection> <holeType name="Tick"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <holeType name="Int"/>
+   <holeType name="Tick"/>
+   <holeType name="univ"/>
+   <holeType name="seq/Int"/>
+   <set name="First" holeType="to/Ord"/>
+   <set name="Last" holeType="to/Ord"/>
+   <set name="Next" holeType="to/Ord"/>
+   <set name="Prev" holeType="to/Ord"/>
+   <set name="priv" holeType="Process"/>
+   <set name="runs" holeType="Process"/>
+</node>
+
+<node color="Blue">
+   <holeType name="FirstProc"/>
+</node>
+
+<node color="Gray">
+   <holeType name="Val"/>
+</node>
+
+<node label="p1">
+   <set name="$TwoPrivileged_p1" holeType="Process"/>
+</node>
+
+<node label="p2">
+   <set name="$TwoPrivileged_p2" holeType="Process"/>
+</node>
+
+<node shape="Ellipse" color="Green">
+   <holeType name="Process"/>
+</node>
+
+<node showlabel="no" label="Bad_p1">
+   <set name="$BadTick_p1" holeType="Process"/>
+</node>
+
+<node showlabel="no" label="Bad_p2">
+   <set name="$BadTick_p2" holeType="Process"/>
+</node>
+
+<node visible="no">
+   <holeType name="to/Ord"/>
+</node>
+
+<edge color="Gray" weight="5" label="next">
+   <relation name="nextVal"> <holeType name="Val"/> <holeType name="Val"/> </relation>
+</edge>
+
+<edge color="Green" label="right">
+   <relation name="rightNeighbor"> <holeType name="Process"/> <holeType name="Process"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

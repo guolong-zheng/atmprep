@@ -1,0 +1,1 @@
+(all n:Node | n !in n.^nxt) and (all n:Node | n !in n.^pre)

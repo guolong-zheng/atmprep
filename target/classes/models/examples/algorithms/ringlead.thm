@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view nodetheme="Martha" edgetheme="Martha">
+
+<projection> <holeType name="msg/Tick"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <holeType name="Int"/>
+   <holeType name="MsgViz"/>
+   <holeType name="RingLeadMsgState"/>
+   <holeType name="RingLeadNode"/>
+   <holeType name="RingLeadNodeState"/>
+   <holeType name="univ"/>
+   <holeType name="msg/Tick"/>
+   <holeType name="seq/Int"/>
+   <set name="$Loop_t" holeType="msg/Tick"/>
+   <set name="available" holeType="msg/Msg"/>
+   <set name="First" holeType="tickOrd/Ord"/>
+   <set name="Last" holeType="tickOrd/Ord"/>
+   <set name="Next" holeType="tickOrd/Ord"/>
+   <set name="Prev" holeType="tickOrd/Ord"/>
+   <set name="sentOn" holeType="msg/Msg"/>
+</node>
+
+<node label="False">
+   <holeType name="bool/False"/>
+</node>
+
+<node label="Msg">
+   <holeType name="msg/Msg"/>
+</node>
+
+<node label="MsgState">
+   <holeType name="msg/MsgState"/>
+</node>
+
+<node label="True">
+   <holeType name="bool/True"/>
+</node>
+
+<node shape="Ellipse" color="Blue" label="Node">
+   <holeType name="msg/Node"/>
+</node>
+
+<node shape="Ellipse" color="Blue" label="NodeState">
+   <holeType name="msg/NodeState"/>
+</node>
+
+<node visible="no">
+   <holeType name="bool/Bool"/>
+   <holeType name="nodeOrd/Ord"/>
+   <holeType name="tickOrd/Ord"/>
+</node>
+
+<edge color="Blue">
+   <relation name="from"> <holeType name="msg/MsgState"/> <holeType name="msg/Node"/> </relation>
+   <relation name="vFrom"> <holeType name="MsgViz"/> <holeType name="msg/Node"/> </relation>
+</edge>
+
+<edge color="Yellow">
+   <relation name="to"> <holeType name="msg/MsgState"/> <holeType name="msg/Node"/> </relation>
+   <relation name="vTo"> <holeType name="MsgViz"/> <holeType name="msg/Node"/> </relation>
+</edge>
+
+<edge visible="no" attribute="yes">
+   <relation name="leader"> <holeType name="RingLeadNodeState"/> <holeType name="bool/Bool"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

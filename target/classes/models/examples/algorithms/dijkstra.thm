@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view nodetheme="Martha">
+
+<projection> <holeType name="State"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <holeType name="Int"/>
+   <holeType name="State"/>
+   <holeType name="univ"/>
+   <holeType name="seq/Int"/>
+   <set name="$Deadlock_s" holeType="State"/>
+   <set name="First" holeType="so/Ord"/>
+   <set name="Last" holeType="so/Ord"/>
+   <set name="Next" holeType="so/Ord"/>
+   <set name="Prev" holeType="so/Ord"/>
+</node>
+
+<node samerank="no" color="Red" label="Process ">
+   <holeType name="Process"/>
+</node>
+
+<node samerank="no" shape="Ellipse" label="Mutex ">
+   <holeType name="Mutex"/>
+</node>
+
+<node visible="no">
+   <holeType name="mo/Ord"/>
+   <holeType name="so/Ord"/>
+</node>
+
+<edge label="">
+   <relation name="holds"> <holeType name="Process"/> <holeType name="Mutex"/> </relation>
+</edge>
+
+<edge visible="no">
+   <relation name="Next"> <holeType name="mo/Ord"/> <holeType name="Mutex"/> <holeType name="Mutex"/> </relation>
+   <relation name="Prev"> <holeType name="mo/Ord"/> <holeType name="Mutex"/> <holeType name="Mutex"/> </relation>
+   <relation name="waits"> <holeType name="Process"/> <holeType name="Mutex"/> </relation>
+</edge>
+
+<edge visible="no" attribute="no">
+   <relation name="First"> <holeType name="mo/Ord"/> <holeType name="Mutex"/> </relation>
+   <relation name="Last"> <holeType name="mo/Ord"/> <holeType name="Mutex"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

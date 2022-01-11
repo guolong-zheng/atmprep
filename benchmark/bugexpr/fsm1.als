@@ -1,0 +1,1 @@
+ all s: State | s.transition !in FSM.start

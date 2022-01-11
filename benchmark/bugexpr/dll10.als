@@ -1,0 +1,1 @@
+ all n: Node { n not in n.^nxt and n not in n.^pre}

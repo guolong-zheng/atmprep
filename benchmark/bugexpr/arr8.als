@@ -1,0 +1,1 @@
+all idx1, idx2 : Array.i2e.Element | idx1 != idx2 => Array.i2e[idx1] != Array.i2e[idx2]

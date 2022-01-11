@@ -1,0 +1,1 @@
+all b:Book | all n:b.entry | lone b.listed[n]

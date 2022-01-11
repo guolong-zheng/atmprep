@@ -1,0 +1,1 @@
+all n1, n2: Node | n1 = n2 or n1.*nxt.elem != n2.*nxt.elem

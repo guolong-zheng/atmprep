@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view nodetheme="Martha" edgetheme="Standard">
+
+<projection> <holeType name="BirthdayBook"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <holeType name="BirthdayBook"/>
+   <holeType name="Int"/>
+   <holeType name="Name"/>
+   <holeType name="univ"/>
+   <holeType name="seq/Int"/>
+   <set name="$BusyDay_bb" holeType="BirthdayBook"/>
+   <set name="known" holeType="Name"/>
+</node>
+
+<node color="Blue">
+   <holeType name="Date"/>
+</node>
+
+<node label="cards">
+   <set name="$BusyDay_cards" holeType="Name"/>
+</node>
+
+<node label="d">
+   <set name="$BusyDay_d" holeType="Date"/>
+</node>
+
+</view>
+
+</alloy>

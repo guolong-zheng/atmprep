@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view nodetheme="Martha" edgetheme="Standard">
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <holeType name="Cur"/>
+   <holeType name="Dir"/>
+   <holeType name="DirEntry"/>
+   <holeType name="File"/>
+   <holeType name="Int"/>
+   <holeType name="univ"/>
+   <holeType name="seq/Int"/>
+</node>
+
+<node color="Red">
+   <holeType name="Root"/>
+</node>
+
+<node hideunconnected="yes">
+   <holeType name="Name"/>
+</node>
+
+<node shape="Ellipse">
+   <holeType name="Object"/>
+</node>
+
+<node showlabel="no">
+   <set name="$NoDirAliases_o" holeType="Dir"/>
+</node>
+
+<edge visible="no" attribute="yes">
+   <relation name="name"> <holeType name="DirEntry"/> <holeType name="Name"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

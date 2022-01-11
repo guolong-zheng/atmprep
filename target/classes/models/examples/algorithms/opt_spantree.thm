@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view nodetheme="Martha" edgetheme="Standard">
+
+<projection> <holeType name="State"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <holeType name="Int"/>
+   <holeType name="Root"/>
+   <holeType name="State"/>
+   <holeType name="univ"/>
+   <holeType name="seq/Int"/>
+   <set name="First" holeType="so/Ord"/>
+   <set name="Last" holeType="so/Ord"/>
+   <set name="Next" holeType="so/Ord"/>
+   <set name="Prev" holeType="so/Ord"/>
+</node>
+
+<node color="Yellow">
+   <set name="runs" holeType="Process"/>
+</node>
+
+<node shape="Ellipse" color="Gray">
+   <holeType name="Process"/>
+</node>
+
+<node visible="no">
+   <holeType name="lo/Ord"/>
+   <holeType name="so/Ord"/>
+</node>
+
+<node visible="no" label="">
+   <holeType name="Lvl"/>
+</node>
+
+<edge color="Gray" label="">
+   <relation name="adj"> <holeType name="Process"/> <holeType name="Process"/> </relation>
+</edge>
+
+<edge color="Red" label="">
+   <relation name="parent"> <holeType name="Process"/> <holeType name="Process"/> </relation>
+</edge>
+
+<edge visible="no" attribute="yes" label="level">
+   <relation name="lvl"> <holeType name="Process"/> <holeType name="Lvl"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

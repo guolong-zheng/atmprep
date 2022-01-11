@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view nodetheme="Martha" edgetheme="Standard">
+
+<projection> <holeType name="State"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <holeType name="Ack"/>
+   <holeType name="AssignParent"/>
+   <holeType name="Elect"/>
+   <holeType name="Init"/>
+   <holeType name="ReadReqOrAck"/>
+   <holeType name="Req"/>
+   <holeType name="ResolveContention"/>
+   <holeType name="State"/>
+   <holeType name="Stutter"/>
+   <holeType name="univ"/>
+   <holeType name="WriteReqOrAck"/>
+   <holeType name="seq/Int"/>
+   <set name="active" holeType="Node"/>
+   <set name="contending" holeType="Node"/>
+   <set name="First" holeType="ord/Ord"/>
+   <set name="Last" holeType="ord/Ord"/>
+   <set name="Next" holeType="ord/Ord"/>
+   <set name="Prev" holeType="ord/Ord"/>
+   <set name="waiting" holeType="Node"/>
+</node>
+
+<node color="Red">
+   <set name="elected" holeType="Node"/>
+</node>
+
+<node color="Yellow" label="tree">
+   <set name="parentLinks" holeType="Link"/>
+</node>
+
+<node hideunconnected="yes">
+   <holeType name="Msg"/>
+</node>
+
+<node label="root">
+   <set name="$root" holeType="Node"/>
+</node>
+
+<node shape="Diamond" color="Gray">
+   <holeType name="Link"/>
+</node>
+
+<node shape="Ellipse" color="Blue">
+   <holeType name="Node"/>
+</node>
+
+<node visible="no">
+   <holeType name="Int"/>
+   <holeType name="ord/Ord"/>
+</node>
+
+<node visible="no" hideunconnected="yes">
+   <holeType name="Queue"/>
+</node>
+
+<node visible="no" shape="Trapezoid" color="Gray">
+   <holeType name="Op"/>
+</node>
+
+<node visible="yes" color="Red" label="">
+   <set name="op" holeType="Op"/>
+</node>
+
+<edge color="Red" label="tree">
+   <relation name="$tree"> <holeType name="Node"/> <holeType name="Node"/> </relation>
+</edge>
+
+<edge label="">
+   <relation name="from"> <holeType name="Node"/> <holeType name="Link"/> </relation>
+   <relation name="slot"> <holeType name="Queue"/> <holeType name="Msg"/> </relation>
+   <relation name="target"> <holeType name="Link"/> <holeType name="Node"/> </relation>
+</edge>
+
+<edge visible="no">
+   <relation name="reverse"> <holeType name="Link"/> <holeType name="Link"/> </relation>
+   <relation name="source"> <holeType name="Link"/> <holeType name="Node"/> </relation>
+   <relation name="to"> <holeType name="Node"/> <holeType name="Link"/> </relation>
+</edge>
+
+<edge visible="no" attribute="no" label="">
+   <relation name="queue"> <holeType name="Link"/> <holeType name="Queue"/> </relation>
+</edge>
+
+<edge visible="no" attribute="yes" label="queued">
+   <relation name="$queued"> <holeType name="Link"/> <holeType name="Msg"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

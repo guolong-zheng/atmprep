@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view nodetheme="Martha">
+
+<projection> <holeType name="Tick"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <holeType name="Int"/>
+   <holeType name="Tick"/>
+   <holeType name="univ"/>
+   <holeType name="seq/Int"/>
+   <set name="$SomeState_t" holeType="Tick"/>
+   <set name="First" holeType="ord/Ord"/>
+   <set name="Last" holeType="ord/Ord"/>
+   <set name="Next" holeType="ord/Ord"/>
+   <set name="Prev" holeType="ord/Ord"/>
+   <set name="runs" holeType="Process"/>
+</node>
+
+<node color="Blue">
+   <set name="$ring_n" holeType="Process"/>
+</node>
+
+<node label="False">
+   <holeType name="bool/False"/>
+</node>
+
+<node label="True">
+   <holeType name="bool/True"/>
+</node>
+
+<node shape="Ellipse" color="Green">
+   <holeType name="Process"/>
+</node>
+
+<node visible="no">
+   <holeType name="bool/Bool"/>
+   <holeType name="ord/Ord"/>
+</node>
+
+<edge color="Green" label="right">
+   <relation name="rightNeighbor"> <holeType name="Process"/> <holeType name="Process"/> </relation>
+</edge>
+
+<edge color="Red" label="ring">
+   <relation name="ring_"> <holeType name="Process"/> <holeType name="Process"/> </relation>
+</edge>
+
+<edge visible="no" attribute="yes">
+   <relation name="dir"> <holeType name="Process"/> <holeType name="bool/Bool"/> </relation>
+   <relation name="S"> <holeType name="Process"/> <holeType name="bool/Bool"/> </relation>
+   <relation name="T"> <holeType name="Process"/> <holeType name="bool/Bool"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

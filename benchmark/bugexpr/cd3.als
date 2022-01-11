@@ -1,0 +1,1 @@
+ all c: Class | Object !in c.^ext

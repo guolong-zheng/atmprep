@@ -1,0 +1,171 @@
+benchmark/a4f/graphs/graphs_acyclic_11.als@(a = (a . ^(*(adj))))@0.992@M@3
+benchmark/a4f/graphs/graphs_acyclic_12.als@(a = (a . ^(*(adj))))@1.014@M@3
+benchmark/a4f/graphs/graphs_acyclic_13.als@(a in (a . ^(adj)))@0.748@M@3
+benchmark/a4f/graphs/graphs_acyclic_14.als@(iden = (*(adj) - ^(adj)))@1.1@M@3
+benchmark/a4f/graphs/graphs_acyclic_15.als@(iden = (*(adj) - ^(adj)))@1.084@M@3
+benchmark/a4f/graphs/graphs_acyclic_17.als@Node !in Node@7.438@R@6
+benchmark/a4f/graphs/graphs_acyclic_18.als@some a: one (Node) | (a !in (a . ^(adj)))@3.515@M@3
+benchmark/a4f/graphs/graphs_acyclic_20.als@(n in (n . ^(~(adj))))@2.446@M@3
+benchmark/a4f/graphs/graphs_acyclic_21.als@(a in (a . ^(adj)))@0.742@M@3
+benchmark/a4f/graphs/graphs_acyclic_22.als@no a: one (Node) | (a !in (a . ~(~(adj))))@10.3@M@3
+benchmark/a4f/graphs/graphs_acyclic_26.als@some a: one (Node) | (a !in (a . ^(adj)))@3.474@M@3
+benchmark/a4f/graphs/graphs_acyclic_27.als@no a: one (Node) | ((a -> a) in ^(adj))@7.24@M@3
+benchmark/a4f/graphs/graphs_acyclic_28.als@no a, b: one (Node) | ((a -> a) in ^(adj))@7.364@M@3
+benchmark/a4f/graphs/graphs_acyclic_3.als@(a !in (a . ^(*(~(adj)))))@1.322@M@3
+benchmark/a4f/graphs/graphs_acyclic_4.als@(a !in (a . ^(*(~(adj)))))@1.313@M@3
+benchmark/a4f/graphs/graphs_acyclic_5.als@(a !in (a . ^(*(~(adj)))))@1.312@M@3
+benchmark/a4f/graphs/graphs_complete_1.als@(Node = (n . *(adj)))@0.951@M@3
+benchmark/a4f/graphs/graphs_complete_12.als@((1 = 1) => ((a -> b) in adj))@0.623@M@3
+benchmark/a4f/graphs/graphs_complete_13.als@(Node = (n . *(adj)))@0.973@M@3
+benchmark/a4f/graphs/graphs_complete_14.als@(Node = (n . adj))@7.103@M@3
+benchmark/a4f/graphs/graphs_complete_15.als@((n . adj) = (Node + n))@3.536@M@3
+benchmark/a4f/graphs/graphs_complete_16.als@(Node = (n . adj))@3.89@M@3
+benchmark/a4f/graphs/graphs_complete_17.als@(Node = (n . ~(adj)))@1.031@M@3
+benchmark/a4f/graphs/graphs_complete_18.als@Node = Node . (~(adj) . adj)@26.928@R@5
+benchmark/a4f/graphs/graphs_complete_19.als@Node = Node . ^(adj)@10.366@R@3
+benchmark/a4f/graphs/graphs_complete_2.als@((n . adj) in Node)@0.511@M@3
+benchmark/a4f/graphs/graphs_complete_23.als@Node = Node . ~(adj)@3.825@R@3
+benchmark/a4f/graphs/graphs_complete_25.als@Node = Node . ^(adj)@6.709@R@3
+benchmark/a4f/graphs/graphs_complete_26.als@(Node = (n . *(adj)))@0.962@M@3
+benchmark/a4f/graphs/graphs_complete_27.als@(Node = (n . ~(adj)))@0.966@M@3
+benchmark/a4f/graphs/graphs_complete_28.als@(Node = (n . adj))@7.033@M@3
+benchmark/a4f/graphs/graphs_complete_30.als@Node = Node . ^(adj)@7.274@R@3
+benchmark/a4f/graphs/graphs_complete_31.als@Node = Node . ^(adj)@6.675@R@3
+benchmark/a4f/graphs/graphs_complete_32.als@(Node = (n . *(adj)))@0.944@M@3
+benchmark/a4f/graphs/graphs_complete_33.als@Node = Node . adj@3.275@R@2
+benchmark/a4f/graphs/graphs_complete_34.als@((n . adj) in Node)@0.508@M@3
+benchmark/a4f/graphs/graphs_complete_6.als@(b in (a . ~(~(adj))))@1.306@M@3
+benchmark/a4f/graphs/graphs_complete_9.als@((n . adj) in Node)@8.505@M@3
+benchmark/a4f/graphs/graphs_noloops_1.als@-@0.151@F@-
+benchmark/a4f/graphs/graphs_noloops_10.als@-@0.141@F@-
+benchmark/a4f/graphs/graphs_noloops_11.als@-@0.171@F@-
+benchmark/a4f/graphs/graphs_noloops_12.als@-@0.177@F@-
+benchmark/a4f/graphs/graphs_noloops_13.als@-@0.146@F@-
+benchmark/a4f/graphs/graphs_noloops_14.als@-@0.17@F@-
+benchmark/a4f/graphs/graphs_noloops_15.als@-@0.146@F@-
+benchmark/a4f/graphs/graphs_noloops_16.als@-@0.166@F@-
+benchmark/a4f/graphs/graphs_noloops_17.als@-@0.145@F@-
+benchmark/a4f/graphs/graphs_noloops_2.als@-@0.171@F@-
+benchmark/a4f/graphs/graphs_noloops_3.als@-@0.165@F@-
+benchmark/a4f/graphs/graphs_noloops_4.als@-@0.171@F@-
+benchmark/a4f/graphs/graphs_noloops_5.als@-@0.171@F@-
+benchmark/a4f/graphs/graphs_noloops_6.als@-@0.176@F@-
+benchmark/a4f/graphs/graphs_noloops_7.als@-@0.177@F@-
+benchmark/a4f/graphs/graphs_noloops_8.als@-@0.169@F@-
+benchmark/a4f/graphs/graphs_noloops_9.als@-@0.142@F@-
+benchmark/a4f/graphs/graphs_oriented_1.als@some ((adj - ~(adj)))@4.164@M@3
+benchmark/a4f/graphs/graphs_oriented_10.als@Node = (Node - (Node . adj))@27.746@R@6
+benchmark/a4f/graphs/graphs_oriented_11.als@!(some (adj))@5.432@M@3
+benchmark/a4f/graphs/graphs_oriented_12.als@!(some (adj))@5.274@M@3
+benchmark/a4f/graphs/graphs_oriented_13.als@!(some (adj))@5.372@M@3
+benchmark/a4f/graphs/graphs_oriented_14.als@!(some (adj))@5.189@M@3
+benchmark/a4f/graphs/graphs_oriented_16.als@some ((adj - ~(adj)))@13.72@M@3
+benchmark/a4f/graphs/graphs_oriented_17.als@some (~(*(adj)))@3.85@M@3
+benchmark/a4f/graphs/graphs_oriented_2.als@some ((adj - ~(adj)))@4.201@M@3
+benchmark/a4f/graphs/graphs_oriented_4.als@Node = Node . adj@17.577@R@5
+benchmark/a4f/graphs/graphs_stronglyConnected_1.als@-@0.141@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_10.als@-@0.142@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_11.als@-@0.145@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_12.als@-@0.15@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_13.als@-@0.163@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_14.als@-@0.142@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_15.als@-@0.14@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_16.als@-@0.14@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_17.als@-@0.141@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_18.als@-@0.145@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_19.als@-@0.143@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_2.als@-@0.14@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_20.als@-@0.14@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_21.als@-@0.143@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_22.als@-@0.143@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_23.als@-@0.143@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_24.als@-@0.142@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_3.als@-@0.14@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_4.als@-@0.142@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_5.als@-@0.139@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_6.als@-@0.141@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_7.als@-@0.145@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_8.als@-@0.143@F@-
+benchmark/a4f/graphs/graphs_stronglyConnected_9.als@-@0.141@F@-
+benchmark/a4f/graphs/graphs_transitive_1.als@(adj = adj)@0.889@M@3
+benchmark/a4f/graphs/graphs_undirected_1.als@(adj = ~(~(adj)))@1.101@M@3
+benchmark/a4f/graphs/graphs_undirected_11.als@no ((adj - ~(adj)))@11.556@M@3
+benchmark/a4f/graphs/graphs_undirected_12.als@Node = (Node - (Node . adj))@3.135@R@5
+benchmark/a4f/graphs/graphs_undirected_14.als@(adj = ~(~(adj)))@1.118@M@3
+benchmark/a4f/graphs/graphs_undirected_15.als@(adj = ~(~(adj)))@1.12@M@3
+benchmark/a4f/graphs/graphs_undirected_16.als@no ((adj - ~(adj)))@4.177@M@3
+benchmark/a4f/graphs/graphs_undirected_19.als@((~(adj) - adj) in iden)@8.711@M@3
+benchmark/a4f/graphs/graphs_undirected_2.als@((adj - ~(adj)) in iden)@8.58@M@3
+benchmark/a4f/graphs/graphs_undirected_3.als@(((a -> b) in adj) || ((b -> a) !in adj))@0.886@M@3
+benchmark/a4f/graphs/graphs_undirected_6.als@no (((n . adj) - (n . ~(adj))))@6.839@M@3
+benchmark/a4f/graphs/graphs_undirected_7.als@Node = (Node . adj)@8.317@R@3
+benchmark/a4f/graphs/graphs_undirected_9.als@Node = (Node - (Node . adj))@3.203@R@5
+benchmark/a4f/graphs/graphs_weaklyConnected_1.als@(Node in (n . ~(adj)))@18.179@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_10.als@(Node in (n . ~((adj + ^(adj)))))@28.25@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_100.als@(Node in (n . ~((adj + ^(adj)))))@9.161@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_103.als@(Node = (n . *(adj)))@9.929@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_105.als@(Node = (n . *(adj)))@19.622@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_108.als@(Node in #((adj + ~(adj))))@5.8@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_109.als@(Node in (n . ~(adj)))@8.221@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_11.als@(Node in (n . ~((adj + ^(adj)))))@41.774@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_110.als@(Node in (n . ~(adj)))@14.997@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_112.als@(Node = (n . ~((adj + ~(adj)))))@8.5@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_115.als@(Node in (n . ~((adj + ^(adj)))))@33.06@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_116.als@(Node = (n . ~((adj + ~(adj)))))@29.153@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_120.als@(Node = (n . *(adj)))@12.509@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_121.als@(Node = (n . *(adj)))@11.977@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_123.als@(Node in (n . ~((adj + ^(adj)))))@31.112@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_124.als@(Node in (n . ~((adj + ^(adj)))))@20.694@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_125.als@(Node in (n . ~((adj + ^(adj)))))@28.431@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_127.als@((n . *((adj + ~(adj)))) in Node)@29.493@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_129.als@(Node in (n . ~((adj + ^(adj)))))@25.149@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_131.als@(Node in (n . ~((adj + ^(adj)))))@13.994@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_132.als@(Node in (n . ~((adj + ^(adj)))))@32.908@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_136.als@(Node = (n . ~((adj + ~(adj)))))@28.757@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_137.als@Node = (Node . adj)@17.425@R@6
+benchmark/a4f/graphs/graphs_weaklyConnected_138.als@-@0.098@F@-
+benchmark/a4f/graphs/graphs_weaklyConnected_14.als@(Node = (n . ~((adj + ~(adj)))))@11.202@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_16.als@((Node - n) in (n . ^((adj + ~(adj)))))@0.763@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_19.als@(Node = (n . *(adj)))@8.724@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_2.als@(Node in (n . ~(adj)))@31.042@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_20.als@(Node in (n . ~((adj + ^(adj)))))@19.021@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_21.als@(Node in (n . *((~(adj) - ~(adj)))))@19.926@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_24.als@(Node = (n . *(adj)))@9.978@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_26.als@(Node in (n . ~((adj + ^(adj)))))@9.09@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_27.als@(Node in (n . ~((adj + ^(adj)))))@18.658@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_30.als@(Node = (n . *(adj)))@10.065@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_31.als@((n . *((adj + ~(adj)))) in Node)@0.557@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_32.als@((n . *((adj + ~(adj)))) in Node)@15.881@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_33.als@Node = (Node . adj)@88.149@R@6
+benchmark/a4f/graphs/graphs_weaklyConnected_35.als@(Node in (n . ~(adj)))@18.084@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_38.als@(Node = (n . *(adj)))@9.072@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_4.als@(Node = (n . ~((adj + ~(adj)))))@29.566@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_41.als@(Node = (n . *(adj)))@17.559@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_46.als@(Node = (n . ~((adj + ~(adj)))))@8.188@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_54.als@(Node = (n . *(adj)))@11.356@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_55.als@(Node in (n . ~((*(adj) + ~(adj)))))@18.119@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_56.als@(Node = (n . ~((adj + ~(adj)))))@17.954@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_57.als@(Node = (n . *((~(adj) + ^(adj)))))@1.397@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_58.als@(Node = (n . *(adj)))@9.569@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_6.als@(Node in (n . ~((adj + ^(adj)))))@17.99@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_63.als@(Node = (n . *(adj)))@17.578@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_64.als@(Node = (n . *(adj)))@12.877@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_69.als@(Node in (n . ~((adj + ^(adj)))))@9.176@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_71.als@(Node in (n . ~((adj + ^(adj)))))@30.209@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_72.als@(Node = (n . *(adj)))@22.385@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_76.als@(Node in (n . ~(adj)))@14.914@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_79.als@((n . *((adj + ~(adj)))) in Node)@0.691@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_80.als@((n . *((adj + ~(adj)))) in Node)@0.62@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_81.als@((n . *((adj + ~(adj)))) in Node)@0.739@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_82.als@((n . *((adj + ~(adj)))) in Node)@20.262@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_83.als@((n . *((adj + ~(adj)))) in Node)@9.21@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_84.als@((n . *((adj + ~(adj)))) in Node)@0.588@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_86.als@(Node = (n . *(adj)))@18.241@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_87.als@(Node = (n . *(adj)))@19.442@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_88.als@(Node = (n . *(adj)))@18.266@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_89.als@(Node = (n . *(adj)))@17.805@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_9.als@(Node in (n . ~((adj + ^(adj)))))@9.1@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_91.als@(Node = (n . *(adj)))@17.617@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_97.als@(Node in (n . ~((*(adj) + ~(adj)))))@17.388@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_98.als@(Node = (n . *(adj)))@17.68@M@3
+benchmark/a4f/graphs/graphs_weaklyConnected_99.als@(Node = (n . *(adj)))@17.839@M@3
