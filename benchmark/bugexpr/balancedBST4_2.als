@@ -1,1 +1,0 @@
-all n1, n2: Node { HasAtMostOneChild[n1] and HasAtMostOneChild[n2] => ((Depth[n1] - Depth[n2] >= -1) and (Depth[n1] - Depth[n2] <=1)) }

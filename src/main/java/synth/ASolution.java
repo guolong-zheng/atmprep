@@ -48,7 +48,6 @@ public class ASolution {
                         strs.add(res);
                         type2vals.put(type, strs);
                     } catch (Err err) {
-                        //System.out.println(n.toString());
                         err.printStackTrace();
                     }
                 }

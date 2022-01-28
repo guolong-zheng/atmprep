@@ -67,24 +67,14 @@ pred Balanced() {
   }
 }
 
-pred RepOk() {
-  Sorted
-  Balanced
-}
 
-run RepOk for 5
 
-pred depthok {
-	all n : Node | Depth[n] = #(n.*~(left + right))
+assert repair_assert_1{
+	all n : Node | some n => Depth[n] = #(n.*~(left+right))
 }
+check repair_assert_1
 
-run RepOk for 5
-assert repair_assert_1 {
- depthok
+pred repair_pred_1{
+	all n : Node | some n => Depth[n] = #(n.*~(left+right))
 }
- check repair_assert_1
-pred repair_pred_1 {
-  some Node
-  depthok
-}
- run repair_pred_1
+run repair_pred_1

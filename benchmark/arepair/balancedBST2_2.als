@@ -43,6 +43,7 @@ pred HasAtMostOneChild(n: Node) {
 fun Depth(n: Node): one Int {
   // The number of nodes from the tree's root to n.
   // Fix: replace "(#BinaryTree.root.*(left+right))-(#n.(left+right))" with "#{n.*~(left + right)}".
+  // BUG
   (#BinaryTree.root.*(left+right))-(#n.(left+right))
 }
 
@@ -54,17 +55,12 @@ pred Balanced() {
   }
 }
 
-pred RepOk() {
-  Sorted
-  Balanced
+assert repair_assert_2{
+	all n:Node | Depth[n] = #{n.*~(left + right)}
 }
+check repair_assert_2
 
-assert repair_assert_1 {
-  all n : Node | Depth[n] = #{n.*~(left + right)}
+pred repair_pred_2{
+	all n:Node | Depth[n] = #{n.*~(left + right)}
 }
- check repair_assert_1
-pred repair_pred_1 {
-  some Node
-  all n : Node | Depth[n] = #{n.*~(left + right)}
-}
- run repair_pred_1
+run repair_pred_2

@@ -18,6 +18,8 @@ public class RepairOption {
 
     public int init_inst = 3;
 
+    public boolean is_prune = true;
+
     public RepairOption(){
 
     }

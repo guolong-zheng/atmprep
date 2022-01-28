@@ -1,1 +1,0 @@
-all s: State | s.transition = none => s in FSM.stop

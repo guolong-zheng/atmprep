@@ -1,1 +1,0 @@
- all n1, n2: Node { n1=n2 || {HasAtMostOneChild[n1] && HasAtMostOneChild[n2] implies {Depth[n1] = Depth[n2] || Depth[n1] - 1 = Depth[n2] || Depth[n1] + 1 = Depth[n2] }}}

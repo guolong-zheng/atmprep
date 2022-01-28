@@ -31,7 +31,8 @@ pred UniqueElem() {
 pred Sorted() {
   // The list is sorted in ascending order (<=) along nxt.
   all n: Node {
-    some n.nxt => n.elem <= n.nxt.elem
+    // Fix: replace "n.elem < n.nxt.elem" with "some n.nxt => n.elem <= n.nxt.elem".
+    n.elem < n.nxt.elem
   }
 }
 
@@ -50,12 +51,16 @@ pred RepOk() {
   ConsistentPreAndNxt
 }
 
-run RepOk for 5
-assert repair_assert_1 {
-  ConsistentPreAndNxt <=> all n1, n2 : Node | n1.nxt = n2 <=> n2.pre = n1
+//run RepOk for 5
+
+assert repair_assert_1{
+	Sorted <=>
+	all n : Node | some n.nxt => n.elem <= n.nxt.elem
 }
- check repair_assert_1
-pred repair_pred_1 {
-  ConsistentPreAndNxt <=> all n1, n2 : Node | n1.nxt = n2 <=> n2.pre = n1
+check repair_assert_1
+
+pred repair_pred_1{
+	Sorted <=>
+	all n : Node | some n.nxt => n.elem <= n.nxt.elem
 }
- run repair_pred_1
+run repair_pred_1

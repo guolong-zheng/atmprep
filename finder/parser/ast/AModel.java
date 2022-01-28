@@ -47,6 +47,9 @@ public class AModel extends Node {
 
     public CompModule origModel;
 
+    public boolean containopen = false;
+    public String opened;
+
     public AModel(CompModule compModule) {
         origModel = compModule;
         this.modelName = compModule.getModelName();
@@ -143,16 +146,40 @@ public class AModel extends Node {
 
     protected List<Opens> parseOpens(List<CompModule.Open> opens) {
         // TOFIX, remove filter
-        return opens.stream().filter(open -> !(open.filename.contains("util"))).map(open -> {
-            return new Opens(this, open);
-        }).collect(Collectors.toList());
+        List<Opens> tmp = new ArrayList<>();
+
+        for(CompModule.Open open : opens){
+            if( !open.filename.contains("util")){
+                tmp.add( new Opens(this, open) );
+            }
+
+            // TODO: workaround for production ordering
+            if(open.filename.contains("ordering")) {
+                containopen = true;
+                opened = "open util/ordering[Position]\n";
+            }
+        }
+        return tmp;
+
+//        return opens.stream().filter(open -> !(open.filename.contains("util"))).map(open -> {
+//            return new Opens(this, open);
+//        }).collect(Collectors.toList());
     }
 
     // TOFIX, better way to parse opened model
     protected List<Opens> parseOpens(AModel parent, List<CompModule.Open> opens) {
-        return opens.stream().filter(open -> !(open.filename.contains("util"))).map(open -> {
-            return new Opens(parent, open);
-        }).collect(Collectors.toList());
+        List<Opens> tmp = new ArrayList<>();
+
+        for(CompModule.Open open : opens){
+            if( !open.filename.contains("util") || open.filename.contains("ordering")){
+                tmp.add( new Opens(parent, open) );
+            }
+        }
+        return tmp;
+
+//        return opens.stream().filter(open -> !(open.filename.contains("util"))).map(open -> {
+//            return new Opens(parent, open);
+//        }).collect(Collectors.toList());
     }
 
     protected List<SigDef> parseSigs(List<Sig> allSigs) {
@@ -271,6 +298,8 @@ public class AModel extends Node {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        if(containopen)
+            sb.append(opened);
         opens.stream().forEach(open -> open.toString(sb));
         sigDecls.stream().forEach(sigDef -> sigDef.toString(sb));
         facts.stream().forEach(fact -> fact.toString(sb));
@@ -283,6 +312,8 @@ public class AModel extends Node {
 
     @Override
     public void toString(StringBuilder sb) {
+        if(containopen)
+            sb.append(opened);
         opens.stream().forEach(open -> open.toString(sb));
         sigDecls.stream().forEach(sigDef -> sigDef.toString(sb));
         facts.stream().forEach(fact -> fact.toString(sb));
@@ -294,6 +325,8 @@ public class AModel extends Node {
 
     public String toTemplateString(Template t, Exprn e, String value){
         StringBuilder sb = new StringBuilder();
+        if(containopen)
+            sb.append(opened);
         opens.stream().forEach(open -> open.toString(sb));
         sigDecls.stream().forEach(sigDef -> sigDef.toString(sb));
         facts.stream().forEach(fact -> fact.toTemplateString(t, value, sb));

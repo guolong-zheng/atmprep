@@ -1,1 +1,0 @@
-#FSM.start.transition != 0

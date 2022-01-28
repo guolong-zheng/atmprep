@@ -1,1 +1,0 @@
-all e:Element, i:Int | i->e in Array.i2e => (i>0 and i < Array.length) or (i = 0)

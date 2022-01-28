@@ -16,7 +16,7 @@ fact CardinalityConstraints {
 
 // Correct
 pred Loop(This: List) {
-    no This.header || one n: This.header.*link | n in n.link 
+    no This.header || one n: This.header.*link | n in n.link
 }
 
 // Correct
@@ -32,7 +32,7 @@ pred RepOk(This: List) {
 // Correct
 pred Count(This: List, x: Int, result: Int) {
     RepOk[This]
-    #{n: This.header.*link | n.elem = x} = result 
+    #{n: This.header.*link | n.elem = x} = result
 }
 
 abstract sig Boolean {}
@@ -45,15 +45,30 @@ pred Contains(This: List, x: Int, result: Boolean) {
     {some n: This.header.*link | n.elem = x } => True = result
 }
 
-assert repair_assert_1 {
-    all l : List | all x : Int | all result: Boolean | RepOk[l] and Contains[l, x, result] <=>
-        RepOk [l] and
-        (x ! in l.header.*link.elem <=> result=False)
+fact { some Node }
+
+assert repair_assert_1{
+	all l:List | all x:Int | all res:Boolean |
+		Contains[l, x, res] <=>
+		{
+			RepOk[l]
+			{some n: l.header.*link | n.elem = x } <=> True = res
+		}
 }
- check repair_assert_1
-pred repair_pred_1 {
-    all l : List | all x : Int | all result: Boolean | RepOk[l] and Contains[l, x, result] <=>
-        RepOk [l] and
-        (x ! in l.header.*link.elem <=> result=False)
+check repair_assert_1
+
+pred repair_pred_1{
+	all l:List | all x:Int | all res:Boolean |
+		Contains[l, x, res] <=>
+		{
+			RepOk[l]
+			{some n: l.header.*link | n.elem = x } <=> True = res
+		}
 }
- run repair_pred_1
+run repair_pred_1
+
+
+fact IGNORE {
+  one List
+  List.header.*link = Node
+}

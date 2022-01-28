@@ -15,9 +15,9 @@
 
 package edu.mit.csail.sdg.alloy4whole;
 
-import com.apple.eawt.Application;
-import com.apple.eawt.ApplicationAdapter;
-import com.apple.eawt.ApplicationEvent;
+//import com.apple.eawt.Application;
+//import com.apple.eawt.ApplicationAdapter;
+//import com.apple.eawt.ApplicationEvent;
 import edu.mit.csail.sdg.alloy4.*;
 import edu.mit.csail.sdg.alloy4.A4Preferences.*;
 import edu.mit.csail.sdg.alloy4compiler.ast.*;
@@ -1432,15 +1432,15 @@ public final class SimpleGUI implements ComponentListener, Listener {
            System.setProperty("com.apple.macos.useScreenMenuBar","true");
            System.setProperty("apple.laf.useScreenMenuBar","true");
         }
-        if (Util.onMac()) {
-           Application.getApplication().addPreferencesMenuItem();
-           Application.getApplication().addAboutMenuItem();
-           Application.getApplication().addApplicationListener(new ApplicationAdapter() {
-              @Override public void handleAbout(ApplicationEvent ae)       { doAbout(); }
-              @Override public void handlePreferences(ApplicationEvent ae) { doPreferences(); }
-              @Override public void handleQuit(ApplicationEvent arg0)      { doQuit(); }
-           });
-        }
+//        if (Util.onMac()) {
+//           Application.getApplication().addPreferencesMenuItem();
+//           Application.getApplication().addAboutMenuItem();
+//           Application.getApplication().addApplicationListener(new ApplicationAdapter() {
+//              @Override public void handleAbout(ApplicationEvent ae)       { doAbout(); }
+//              @Override public void handlePreferences(ApplicationEvent ae) { doPreferences(); }
+//              @Override public void handleQuit(ApplicationEvent arg0)      { doQuit(); }
+//           });
+//        }
 
         doLookAndFeel();
 

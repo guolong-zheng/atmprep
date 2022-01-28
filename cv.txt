@@ -1,0 +1,137 @@
+benchmark/a4f/cv/cv_inv1_10.alsbenchmark/a4f/cv/cv_inv1_10.alsbenchmark/a4f/cv/cv_inv1_10.als@w2 in (User . (visible - profile))@312.987@R
+benchmark/a4f/cv/cv_inv1_11.alsbenchmark/a4f/cv/cv_inv1_11.als@-@-@NoFL@-
+benchmark/a4f/cv/cv_inv1_12.alsbenchmark/a4f/cv/cv_inv1_12.als@-@3599.936@F@-
+benchmark/a4f/cv/cv_inv1_13.alsbenchmark/a4f/cv/cv_inv1_13.alsbenchmark/a4f/cv/cv_inv1_13.als@User = User . *((visible - profile))@698.356@R
+benchmark/a4f/cv/cv_inv1_14.alsbenchmark/a4f/cv/cv_inv1_14.alsbenchmark/a4f/cv/cv_inv1_14.als@User = User . *((visible - profile))@778.619@R
+benchmark/a4f/cv/cv_inv1_15.alsbenchmark/a4f/cv/cv_inv1_15.alsbenchmark/a4f/cv/cv_inv1_15.als@User = User . *((visible - profile))@779.915@R
+benchmark/a4f/cv/cv_inv1_16.alsbenchmark/a4f/cv/cv_inv1_16.alsbenchmark/a4f/cv/cv_inv1_16.als@User = User . *((visible - profile))@267.993@R
+benchmark/a4f/cv/cv_inv1_18.alsbenchmark/a4f/cv/cv_inv1_18.alsbenchmark/a4f/cv/cv_inv1_18.als@Work = Work@7.298@R
+benchmark/a4f/cv/cv_inv1_19.alsbenchmark/a4f/cv/cv_inv1_19.alsbenchmark/a4f/cv/cv_inv1_19.als@User = User . *((visible - profile))@87.475@R
+benchmark/a4f/cv/cv_inv1_1.alsbenchmark/a4f/cv/cv_inv1_1.alsbenchmark/a4f/cv/cv_inv1_1.als@w in (User . (visible - profile))@13.466@R
+benchmark/a4f/cv/cv_inv1_20.alsbenchmark/a4f/cv/cv_inv1_20.alsbenchmark/a4f/cv/cv_inv1_20.als@User = User . *((visible - profile))@762.742@R
+benchmark/a4f/cv/cv_inv1_21.alsbenchmark/a4f/cv/cv_inv1_21.alsbenchmark/a4f/cv/cv_inv1_21.als@User = User . *((visible - profile))@663.476@R
+benchmark/a4f/cv/cv_inv1_22.alsbenchmark/a4f/cv/cv_inv1_22.als@-@-@NoFL@-
+benchmark/a4f/cv/cv_inv1_23.alsbenchmark/a4f/cv/cv_inv1_23.alsbenchmark/a4f/cv/cv_inv1_23.als@w in (User . (visible - profile))@13.504@R
+benchmark/a4f/cv/cv_inv1_24.alsbenchmark/a4f/cv/cv_inv1_24.alsbenchmark/a4f/cv/cv_inv1_24.als@User = User . *((visible - profile))@72.116@R
+benchmark/a4f/cv/cv_inv1_25.alsbenchmark/a4f/cv/cv_inv1_25.als@-@-@NoFL@-
+benchmark/a4f/cv/cv_inv1_26.alsbenchmark/a4f/cv/cv_inv1_26.alsbenchmark/a4f/cv/cv_inv1_26.als@User = User . *((visible - profile))@659.004@R
+benchmark/a4f/cv/cv_inv1_27.alsbenchmark/a4f/cv/cv_inv1_27.alsbenchmark/a4f/cv/cv_inv1_27.als@w in (User . (visible - profile))@199.658@R
+benchmark/a4f/cv/cv_inv1_2.alsbenchmark/a4f/cv/cv_inv1_2.alsbenchmark/a4f/cv/cv_inv1_2.als@User = User . *((visible - profile))@258.751@R
+benchmark/a4f/cv/cv_inv1_3.alsbenchmark/a4f/cv/cv_inv1_3.als@-@3599.945@F@-
+benchmark/a4f/cv/cv_inv1_4.alsbenchmark/a4f/cv/cv_inv1_4.alsbenchmark/a4f/cv/cv_inv1_4.als@User = User@6.324@R
+benchmark/a4f/cv/cv_inv1_5.alsbenchmark/a4f/cv/cv_inv1_5.alsbenchmark/a4f/cv/cv_inv1_5.als@User = User . *((visible - profile))@638.511@R
+benchmark/a4f/cv/cv_inv1_6.alsbenchmark/a4f/cv/cv_inv1_6.als@-@3600@F@-
+benchmark/a4f/cv/cv_inv1_7.alsbenchmark/a4f/cv/cv_inv1_7.als@-@-@NoFL@-
+benchmark/a4f/cv/cv_inv1_8.alsbenchmark/a4f/cv/cv_inv1_8.alsbenchmark/a4f/cv/cv_inv1_8.als@User = User . *((visible - profile))@267.917@R
+benchmark/a4f/cv/cv_inv1_9.alsbenchmark/a4f/cv/cv_inv1_9.als@-@3599.945@F@-
+benchmark/a4f/cv/cv_inv2_10.alsbenchmark/a4f/cv/cv_inv2_10.alsbenchmark/a4f/cv/cv_inv2_10.als@((u . profile) in ((source . u) + (source . Institution)))@1.735@M@3
+benchmark/a4f/cv/cv_inv2_11.alsbenchmark/a4f/cv/cv_inv2_11.als@-@3599.937@F@-
+benchmark/a4f/cv/cv_inv2_12.alsbenchmark/a4f/cv/cv_inv2_12.alsbenchmark/a4f/cv/cv_inv2_12.als@((u . profile) in ((source . u) + (source . Institution)))@1.663@M@3
+benchmark/a4f/cv/cv_inv2_13.alsbenchmark/a4f/cv/cv_inv2_13.als@-@3599.962@F@-
+benchmark/a4f/cv/cv_inv2_14.alsbenchmark/a4f/cv/cv_inv2_14.als@-@3599.919@F@-
+benchmark/a4f/cv/cv_inv2_15.alsbenchmark/a4f/cv/cv_inv2_15.als@-@3599.93@F@-
+benchmark/a4f/cv/cv_inv2_16.alsbenchmark/a4f/cv/cv_inv2_16.als@-@3599.925@F@-
+benchmark/a4f/cv/cv_inv2_17.alsbenchmark/a4f/cv/cv_inv2_17.als@-@3599.927@F@-
+benchmark/a4f/cv/cv_inv2_18.alsbenchmark/a4f/cv/cv_inv2_18.als@-@3599.937@F@-
+benchmark/a4f/cv/cv_inv2_19.alsbenchmark/a4f/cv/cv_inv2_19.als@-@3599.934@F@-
+benchmark/a4f/cv/cv_inv2_1.alsbenchmark/a4f/cv/cv_inv2_1.als@-@3599.916@F@-
+benchmark/a4f/cv/cv_inv2_20.alsbenchmark/a4f/cv/cv_inv2_20.alsbenchmark/a4f/cv/cv_inv2_20.als@w in u . ~(source)@162.499@R
+benchmark/a4f/cv/cv_inv2_21.alsbenchmark/a4f/cv/cv_inv2_21.als@-@3599.938@F@-
+benchmark/a4f/cv/cv_inv2_22.alsbenchmark/a4f/cv/cv_inv2_22.als@-@3599.924@F@-
+benchmark/a4f/cv/cv_inv2_23.alsbenchmark/a4f/cv/cv_inv2_23.als@-@3599.92@F@-
+benchmark/a4f/cv/cv_inv2_24.alsbenchmark/a4f/cv/cv_inv2_24.alsbenchmark/a4f/cv/cv_inv2_24.als@((u . profile) in ((source . u) + (source . Institution)))@1.879@M@3
+benchmark/a4f/cv/cv_inv2_25.alsbenchmark/a4f/cv/cv_inv2_25.als@-@3599.962@F@-
+benchmark/a4f/cv/cv_inv2_26.alsbenchmark/a4f/cv/cv_inv2_26.als@-@3599.933@F@-
+benchmark/a4f/cv/cv_inv2_27.alsbenchmark/a4f/cv/cv_inv2_27.als@-@3599.925@F@-
+benchmark/a4f/cv/cv_inv2_28.alsbenchmark/a4f/cv/cv_inv2_28.alsbenchmark/a4f/cv/cv_inv2_28.als@w in (source . User)@21.887@R
+benchmark/a4f/cv/cv_inv2_29.alsbenchmark/a4f/cv/cv_inv2_29.als@-@3599.924@F@-
+benchmark/a4f/cv/cv_inv2_2.alsbenchmark/a4f/cv/cv_inv2_2.als@-@3599.932@F@-
+benchmark/a4f/cv/cv_inv2_30.alsbenchmark/a4f/cv/cv_inv2_30.als@-@3599.926@F@-
+benchmark/a4f/cv/cv_inv2_31.alsbenchmark/a4f/cv/cv_inv2_31.als@-@3599.927@F@-
+benchmark/a4f/cv/cv_inv2_32.alsbenchmark/a4f/cv/cv_inv2_32.als@-@3599.935@F@-
+benchmark/a4f/cv/cv_inv2_33.alsbenchmark/a4f/cv/cv_inv2_33.als@-@3599.941@F@-
+benchmark/a4f/cv/cv_inv2_34.alsbenchmark/a4f/cv/cv_inv2_34.als@-@-@NoFL@-
+benchmark/a4f/cv/cv_inv2_35.alsbenchmark/a4f/cv/cv_inv2_35.als@-@3599.935@F@-
+benchmark/a4f/cv/cv_inv2_36.alsbenchmark/a4f/cv/cv_inv2_36.als@-@3599.934@F@-
+benchmark/a4f/cv/cv_inv2_37.alsbenchmark/a4f/cv/cv_inv2_37.alsbenchmark/a4f/cv/cv_inv2_37.als@w in (source . User)@21.233@R
+benchmark/a4f/cv/cv_inv2_38.alsbenchmark/a4f/cv/cv_inv2_38.als@-@3599.932@F@-
+benchmark/a4f/cv/cv_inv2_39.alsbenchmark/a4f/cv/cv_inv2_39.als@-@3599.932@F@-
+benchmark/a4f/cv/cv_inv2_3.alsbenchmark/a4f/cv/cv_inv2_3.als@-@3599.927@F@-
+benchmark/a4f/cv/cv_inv2_40.alsbenchmark/a4f/cv/cv_inv2_40.als@-@3599.924@F@-
+benchmark/a4f/cv/cv_inv2_41.alsbenchmark/a4f/cv/cv_inv2_41.als@-@3599.937@F@-
+benchmark/a4f/cv/cv_inv2_42.alsbenchmark/a4f/cv/cv_inv2_42.als@-@3599.965@F@-
+benchmark/a4f/cv/cv_inv2_43.alsbenchmark/a4f/cv/cv_inv2_43.als@-@3599.936@F@-
+benchmark/a4f/cv/cv_inv2_44.alsbenchmark/a4f/cv/cv_inv2_44.als@-@3599.925@F@-
+benchmark/a4f/cv/cv_inv2_45.alsbenchmark/a4f/cv/cv_inv2_45.als@-@3599.922@F@-
+benchmark/a4f/cv/cv_inv2_46.alsbenchmark/a4f/cv/cv_inv2_46.als@-@3599.913@F@-
+benchmark/a4f/cv/cv_inv2_47.alsbenchmark/a4f/cv/cv_inv2_47.alsbenchmark/a4f/cv/cv_inv2_47.als@((u . profile) in ((source . u) + (source . Institution)))@2.098@M@3
+benchmark/a4f/cv/cv_inv2_48.alsbenchmark/a4f/cv/cv_inv2_48.als@-@3599.947@F@-
+benchmark/a4f/cv/cv_inv2_49.alsbenchmark/a4f/cv/cv_inv2_49.als@-@3599.929@F@-
+benchmark/a4f/cv/cv_inv2_4.alsbenchmark/a4f/cv/cv_inv2_4.als@-@3599.938@F@-
+benchmark/a4f/cv/cv_inv2_50.alsbenchmark/a4f/cv/cv_inv2_50.als@-@3599.948@F@-
+benchmark/a4f/cv/cv_inv2_51.alsbenchmark/a4f/cv/cv_inv2_51.als@-@3599.952@F@-
+benchmark/a4f/cv/cv_inv2_52.alsbenchmark/a4f/cv/cv_inv2_52.als@-@3599.928@F@-
+benchmark/a4f/cv/cv_inv2_53.alsbenchmark/a4f/cv/cv_inv2_53.als@-@3599.923@F@-
+benchmark/a4f/cv/cv_inv2_54.alsbenchmark/a4f/cv/cv_inv2_54.alsbenchmark/a4f/cv/cv_inv2_54.als@((w in (u . profile)) => (((w . source) = u) || ((w . source) in Institution)))@5.119@M@3
+benchmark/a4f/cv/cv_inv2_55.alsbenchmark/a4f/cv/cv_inv2_55.als@-@3599.932@F@-
+benchmark/a4f/cv/cv_inv2_56.alsbenchmark/a4f/cv/cv_inv2_56.als@-@3599.928@F@-
+benchmark/a4f/cv/cv_inv2_57.alsbenchmark/a4f/cv/cv_inv2_57.als@-@3599.917@F@-
+benchmark/a4f/cv/cv_inv2_58.alsbenchmark/a4f/cv/cv_inv2_58.als@-@3599.931@F@-
+benchmark/a4f/cv/cv_inv2_59.alsbenchmark/a4f/cv/cv_inv2_59.als@-@3599.919@F@-
+benchmark/a4f/cv/cv_inv2_5.alsbenchmark/a4f/cv/cv_inv2_5.als@-@3599.925@F@-
+benchmark/a4f/cv/cv_inv2_60.alsbenchmark/a4f/cv/cv_inv2_60.als@-@3600@F@-
+benchmark/a4f/cv/cv_inv2_6.alsbenchmark/a4f/cv/cv_inv2_6.als@-@3599.93@F@-
+benchmark/a4f/cv/cv_inv2_7.alsbenchmark/a4f/cv/cv_inv2_7.als@-@3599.93@F@-
+benchmark/a4f/cv/cv_inv2_8.alsbenchmark/a4f/cv/cv_inv2_8.als@-@-@NoFL@-
+benchmark/a4f/cv/cv_inv2_9.alsbenchmark/a4f/cv/cv_inv2_9.als@-@3599.919@F@-
+benchmark/a4f/cv/cv_inv3_10.alsbenchmark/a4f/cv/cv_inv3_10.als@-@3599.967@F@-
+benchmark/a4f/cv/cv_inv3_11.alsbenchmark/a4f/cv/cv_inv3_11.als@-@-@NoFL@-
+benchmark/a4f/cv/cv_inv3_12.alsbenchmark/a4f/cv/cv_inv3_12.als@-@3599.934@F@-
+benchmark/a4f/cv/cv_inv3_13.alsbenchmark/a4f/cv/cv_inv3_13.als@-@3599.924@F@-
+benchmark/a4f/cv/cv_inv3_14.alsbenchmark/a4f/cv/cv_inv3_14.als@-@3599.93@F@-
+benchmark/a4f/cv/cv_inv3_15.alsbenchmark/a4f/cv/cv_inv3_15.als@-@3599.927@F@-
+benchmark/a4f/cv/cv_inv3_16.alsbenchmark/a4f/cv/cv_inv3_16.als@-@3599.931@F@-
+benchmark/a4f/cv/cv_inv3_17.alsbenchmark/a4f/cv/cv_inv3_17.als@-@3599.934@F@-
+benchmark/a4f/cv/cv_inv3_18.alsbenchmark/a4f/cv/cv_inv3_18.als@-@3599.922@F@-
+benchmark/a4f/cv/cv_inv3_19.alsbenchmark/a4f/cv/cv_inv3_19.als@-@3599.938@F@-
+benchmark/a4f/cv/cv_inv3_1.alsbenchmark/a4f/cv/cv_inv3_1.als@-@3599.934@F@-
+benchmark/a4f/cv/cv_inv3_20.alsbenchmark/a4f/cv/cv_inv3_20.als@-@3599.926@F@-
+benchmark/a4f/cv/cv_inv3_21.alsbenchmark/a4f/cv/cv_inv3_21.als@-@3599.935@F@-
+benchmark/a4f/cv/cv_inv3_22.alsbenchmark/a4f/cv/cv_inv3_22.alsbenchmark/a4f/cv/cv_inv3_22.als@w1 !in w2 . *(visible)@1010.888@R
+benchmark/a4f/cv/cv_inv3_23.alsbenchmark/a4f/cv/cv_inv3_23.als@-@3599.929@F@-
+benchmark/a4f/cv/cv_inv3_24.alsbenchmark/a4f/cv/cv_inv3_24.als@-@3599.923@F@-
+benchmark/a4f/cv/cv_inv3_25.alsbenchmark/a4f/cv/cv_inv3_25.als@-@3599.927@F@-
+benchmark/a4f/cv/cv_inv3_26.alsbenchmark/a4f/cv/cv_inv3_26.als@-@3599.937@F@-
+benchmark/a4f/cv/cv_inv3_27.alsbenchmark/a4f/cv/cv_inv3_27.alsbenchmark/a4f/cv/cv_inv3_27.als@w2 !in w1 . *(visible)@1804.891@R
+benchmark/a4f/cv/cv_inv3_28.alsbenchmark/a4f/cv/cv_inv3_28.als@-@3599.92@F@-
+benchmark/a4f/cv/cv_inv3_29.alsbenchmark/a4f/cv/cv_inv3_29.als@-@3599.933@F@-
+benchmark/a4f/cv/cv_inv3_2.alsbenchmark/a4f/cv/cv_inv3_2.als@-@3599.93@F@-
+benchmark/a4f/cv/cv_inv3_30.alsbenchmark/a4f/cv/cv_inv3_30.als@-@3599.927@F@-
+benchmark/a4f/cv/cv_inv3_31.alsbenchmark/a4f/cv/cv_inv3_31.als@-@3599.933@F@-
+benchmark/a4f/cv/cv_inv3_32.alsbenchmark/a4f/cv/cv_inv3_32.als@-@3599.938@F@-
+benchmark/a4f/cv/cv_inv3_33.alsbenchmark/a4f/cv/cv_inv3_33.als@-@3599.929@F@-
+benchmark/a4f/cv/cv_inv3_34.alsbenchmark/a4f/cv/cv_inv3_34.als@-@3599.919@F@-
+benchmark/a4f/cv/cv_inv3_35.alsbenchmark/a4f/cv/cv_inv3_35.als@-@3599.929@F@-
+benchmark/a4f/cv/cv_inv3_36.alsbenchmark/a4f/cv/cv_inv3_36.als@-@3599.93@F@-
+benchmark/a4f/cv/cv_inv3_37.alsbenchmark/a4f/cv/cv_inv3_37.als@-@3599.924@F@-
+benchmark/a4f/cv/cv_inv3_38.alsbenchmark/a4f/cv/cv_inv3_38.als@-@3599.927@F@-
+benchmark/a4f/cv/cv_inv3_39.alsbenchmark/a4f/cv/cv_inv3_39.als@-@3599.922@F@-
+benchmark/a4f/cv/cv_inv3_3.alsbenchmark/a4f/cv/cv_inv3_3.als@-@3599.934@F@-
+benchmark/a4f/cv/cv_inv3_40.alsbenchmark/a4f/cv/cv_inv3_40.als@-@3599.931@F@-
+benchmark/a4f/cv/cv_inv3_41.alsbenchmark/a4f/cv/cv_inv3_41.als@-@3599.951@F@-
+benchmark/a4f/cv/cv_inv3_42.alsbenchmark/a4f/cv/cv_inv3_42.als@-@3599.932@F@-
+benchmark/a4f/cv/cv_inv3_43.alsbenchmark/a4f/cv/cv_inv3_43.als@-@3599.931@F@-
+benchmark/a4f/cv/cv_inv3_44.alsbenchmark/a4f/cv/cv_inv3_44.als@-@3599.93@F@-
+benchmark/a4f/cv/cv_inv3_45.alsbenchmark/a4f/cv/cv_inv3_45.als@-@3599.926@F@-
+benchmark/a4f/cv/cv_inv3_46.alsbenchmark/a4f/cv/cv_inv3_46.alsbenchmark/a4f/cv/cv_inv3_46.als@w2 !in w1 . *(profile)@791.314@R
+benchmark/a4f/cv/cv_inv3_47.alsbenchmark/a4f/cv/cv_inv3_47.als@-@3599.928@F@-
+benchmark/a4f/cv/cv_inv3_48.alsbenchmark/a4f/cv/cv_inv3_48.als@-@3599.929@F@-
+benchmark/a4f/cv/cv_inv3_49.alsbenchmark/a4f/cv/cv_inv3_49.als@-@3599.93@F@-
+benchmark/a4f/cv/cv_inv3_4.alsbenchmark/a4f/cv/cv_inv3_4.als@-@3599.924@F@-
+benchmark/a4f/cv/cv_inv3_50.alsbenchmark/a4f/cv/cv_inv3_50.als@-@3599.934@F@-
+benchmark/a4f/cv/cv_inv3_51.alsbenchmark/a4f/cv/cv_inv3_51.als@-@3599.944@F@-
+benchmark/a4f/cv/cv_inv3_5.alsbenchmark/a4f/cv/cv_inv3_5.als@-@3599.93@F@-
+benchmark/a4f/cv/cv_inv3_6.alsbenchmark/a4f/cv/cv_inv3_6.als@-@3599.928@F@-
+benchmark/a4f/cv/cv_inv3_7.alsbenchmark/a4f/cv/cv_inv3_7.als@-@3599.927@F@-
+benchmark/a4f/cv/cv_inv3_8.alsbenchmark/a4f/cv/cv_inv3_8.als@-@3599.926@F@-
+benchmark/a4f/cv/cv_inv3_9.alsbenchmark/a4f/cv/cv_inv3_9.als@-@3599.94@F@-

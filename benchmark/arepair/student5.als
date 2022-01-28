@@ -22,9 +22,18 @@ pred Loop(This: List) {
 
 // Underconstraint.  Should consider link = n1 -> n2 without loop.
 pred Sorted(This: List) {
-    // Fix: add some n.link
     all n: This.header.*link | n.elem <= n.link.elem
 }
+
+assert repair_assert_1 {
+	all l: List | Sorted[l] <=> { all n: l.header.*link | some n.link => n.elem <= n.link.elem
+}}
+check  repair_assert_1
+
+pred repair_pred_1 {
+	all l: List | Sorted[l] <=> { all n: l.header.*link | some n.link => n.elem <= n.link.elem
+}}
+run repair_pred_1
 
 pred RepOk(This: List) {
     Loop[This]
@@ -47,11 +56,7 @@ pred Contains (This: List, x: Int, result: Boolean) {
     #{n: This.header.*link | x in n.elem} = 0 => result = False
 }
 
-assert repair_assert_1 {
-    all l : List | Sorted[l] <=> all n: l.header.*link | some n.link => n.elem <= n.link.elem
+fact IGNORE {
+  one List
+  List.header.*link = Node
 }
- check repair_assert_1
-pred repair_pred_1 {
-    all l : List | Sorted[l] <=> all n: l.header.*link | some n.link => n.elem <= n.link.elem
-}
- run repair_pred_1

@@ -28,13 +28,14 @@ pred NoConflict() {
 }
 run NoConflict
 
-assert repair_assert_1 {
-  all i: Array.i2e.Element | i >= 0 and i < Array.length
+assert repair_assert_1{
+  NoConflict
+  all i: Array.i2e.Element | i>=0 and i<Array.length
 }
 check repair_assert_1
 
-pred repair_pred_1 {
-  some Element
-  all i: Array.i2e.Element | i >= 0 and i < Array.length
+pred repair_pred_1{
+  NoConflict
+  all i: Array.i2e.Element | i>=0 and i<Array.length
 }
 run repair_pred_1

@@ -1,1 +1,0 @@
- some s1: State | s1 in FSM.stop

@@ -1,1 +1,0 @@
-all n1, n2: Node { (HasAtMostOneChild[n1] && HasAtMostOneChild[n2]) <=> (mul[signum[minus[Depth[n1], Depth[n2]]], minus[Depth[n1], Depth[n2]]] <= 1) }

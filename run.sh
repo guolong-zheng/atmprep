@@ -1,4 +1,5 @@
-for f in benchmark/a4f/production/*.als
+for f in benchmark/a4f/classroom/*.als
 do
-  java -jar atmprep.jar $f
+  echo -n $f;
+  timeout 60m java -jar atmprep.jar $f
 done

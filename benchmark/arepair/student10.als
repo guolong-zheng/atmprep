@@ -29,6 +29,16 @@ pred Sorted(This: List) {
     all n: This.header.*link | n.elem <= n.link.elem
 }
 
+assert repair_assert_1 {
+	all l: List | Sorted[l] <=> { all n: l.header.*link | some n.link => n.elem <= n.link.elem
+}}
+check repair_assert_1
+
+pred repair_pred_1 {
+	all l: List | Sorted[l] <=> { all n: l.header.*link | some n.link => n.elem <= n.link.elem
+}}
+run repair_pred_1
+
 pred RepOk(This: List) {
     Loop[This]
     Sorted[This]
@@ -49,11 +59,7 @@ pred Contains(This: List, x: Int, result: Boolean) {
     x in List.header.*link.elem => result = True else result = False
 }
 
-assert repair_assert_1 {
-    all l : List | Sorted[l] <=> all n: l.header.*link | some n.link => n.elem <= n.link.elem
+fact IGNORE {
+  one List
+  List.header.*link = Node
 }
- check repair_assert_1
-pred repair_pred_1 {
-    all l : List | Sorted[l] <=> all n: l.header.*link | some n.link => n.elem <= n.link.elem
-}
- run repair_pred_1

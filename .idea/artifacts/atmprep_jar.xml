@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="atmprep:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/atmprep_jar</output-path>
+    <root id="archive" name="atmprep.jar">
+      <element id="module-output" name="atmprep" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/apted.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/sat4j-pb.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/org.sat4j.pb.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/sat4j-maxsat.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/org.sat4j.core.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/org.sat4j.maxsat.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/slf4j-api-1.7.25.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

@@ -1,1 +1,0 @@
-all n : Node { n not in n.^(nxt+pre) }

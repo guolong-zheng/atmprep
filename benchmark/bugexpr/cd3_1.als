@@ -1,1 +1,0 @@
- all c: Class - Object | Object in c.ext.^ext

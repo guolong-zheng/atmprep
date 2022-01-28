@@ -1,0 +1,63 @@
+benchmark/a4f/classroom/inv9/classroom_inv9_10.alsbenchmark/a4f/classroom/inv9/classroom_inv9_10.als@-@3599.92@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_11.alsbenchmark/a4f/classroom/inv9/classroom_inv9_11.als@-@3599.903@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_12.alsbenchmark/a4f/classroom/inv9/classroom_inv9_12.als@-@3599.951@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_13.alsbenchmark/a4f/classroom/inv9/classroom_inv9_13.als@-@3599.941@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_14.alsbenchmark/a4f/classroom/inv9/classroom_inv9_14.als@-@3599.936@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_15.alsbenchmark/a4f/classroom/inv9/classroom_inv9_15.als@-@3599.929@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_16.alsbenchmark/a4f/classroom/inv9/classroom_inv9_16.als@-@3599.94@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_17.alsbenchmark/a4f/classroom/inv9/classroom_inv9_17.als@-@3599.933@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_18.alsbenchmark/a4f/classroom/inv9/classroom_inv9_18.als@-@3599.909@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_19.alsbenchmark/a4f/classroom/inv9/classroom_inv9_19.alsbenchmark/a4f/classroom/inv9/classroom_inv9_19.als@lone (((Teacher <: Teaches) . c))@5.297@M@3
+benchmark/a4f/classroom/inv9/classroom_inv9_1.alsbenchmark/a4f/classroom/inv9/classroom_inv9_1.als@-@3599.941@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_20.alsbenchmark/a4f/classroom/inv9/classroom_inv9_20.alsbenchmark/a4f/classroom/inv9/classroom_inv9_20.als@lone (((Teacher <: Teaches) . c))@5.427@M@3
+benchmark/a4f/classroom/inv9/classroom_inv9_21.alsbenchmark/a4f/classroom/inv9/classroom_inv9_21.als@-@3599.918@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_22.alsbenchmark/a4f/classroom/inv9/classroom_inv9_22.alsbenchmark/a4f/classroom/inv9/classroom_inv9_22.als@lone (((Teacher <: Teaches) . c))@1.691@M@3
+benchmark/a4f/classroom/inv9/classroom_inv9_23.alsbenchmark/a4f/classroom/inv9/classroom_inv9_23.als@-@3599.945@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_24.alsbenchmark/a4f/classroom/inv9/classroom_inv9_24.als@-@3599.933@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_25.alsbenchmark/a4f/classroom/inv9/classroom_inv9_25.als@-@3599.927@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_26.alsbenchmark/a4f/classroom/inv9/classroom_inv9_26.als@-@3599.922@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_27.alsbenchmark/a4f/classroom/inv9/classroom_inv9_27.als@-@3599.933@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_28.alsbenchmark/a4f/classroom/inv9/classroom_inv9_28.als@-@3599.941@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_29.alsbenchmark/a4f/classroom/inv9/classroom_inv9_29.als@-@3599.931@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_2.alsbenchmark/a4f/classroom/inv9/classroom_inv9_2.als@-@3599.927@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_30.alsbenchmark/a4f/classroom/inv9/classroom_inv9_30.als@-@3599.932@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_31.alsbenchmark/a4f/classroom/inv9/classroom_inv9_31.als@-@3599.937@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_32.alsbenchmark/a4f/classroom/inv9/classroom_inv9_32.als@-@3599.935@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_33.alsbenchmark/a4f/classroom/inv9/classroom_inv9_33.als@-@3599.928@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_34.alsbenchmark/a4f/classroom/inv9/classroom_inv9_34.als@-@3599.957@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_35.alsbenchmark/a4f/classroom/inv9/classroom_inv9_35.als@-@3599.931@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_36.alsbenchmark/a4f/classroom/inv9/classroom_inv9_36.als@-@3599.932@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_37.alsbenchmark/a4f/classroom/inv9/classroom_inv9_37.als@-@3599.925@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_38.alsbenchmark/a4f/classroom/inv9/classroom_inv9_38.als@-@3599.916@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_39.alsbenchmark/a4f/classroom/inv9/classroom_inv9_39.als@-@3599.93@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_3.alsbenchmark/a4f/classroom/inv9/classroom_inv9_3.als@-@3599.937@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_40.alsbenchmark/a4f/classroom/inv9/classroom_inv9_40.als@-@3599.934@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_41.alsbenchmark/a4f/classroom/inv9/classroom_inv9_41.als@-@3599.923@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_42.alsbenchmark/a4f/classroom/inv9/classroom_inv9_42.als@-@3599.918@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_43.alsbenchmark/a4f/classroom/inv9/classroom_inv9_43.als@-@3599.927@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_44.alsbenchmark/a4f/classroom/inv9/classroom_inv9_44.als@-@3599.925@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_45.alsbenchmark/a4f/classroom/inv9/classroom_inv9_45.als@-@3599.925@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_46.alsbenchmark/a4f/classroom/inv9/classroom_inv9_46.als@-@3599.933@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_47.alsbenchmark/a4f/classroom/inv9/classroom_inv9_47.als@-@3599.918@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_48.alsbenchmark/a4f/classroom/inv9/classroom_inv9_48.als@-@3599.927@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_49.alsbenchmark/a4f/classroom/inv9/classroom_inv9_49.als@-@3599.935@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_4.alsbenchmark/a4f/classroom/inv9/classroom_inv9_4.als@-@3599.925@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_50.alsbenchmark/a4f/classroom/inv9/classroom_inv9_50.als@-@3599.929@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_51.alsbenchmark/a4f/classroom/inv9/classroom_inv9_51.als@-@3599.935@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_52.alsbenchmark/a4f/classroom/inv9/classroom_inv9_52.als@-@3599.929@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_53.alsbenchmark/a4f/classroom/inv9/classroom_inv9_53.als@-@3599.93@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_54.alsbenchmark/a4f/classroom/inv9/classroom_inv9_54.als@-@3599.93@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_55.alsbenchmark/a4f/classroom/inv9/classroom_inv9_55.als@-@3599.927@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_56.alsbenchmark/a4f/classroom/inv9/classroom_inv9_56.als@-@3599.937@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_57.alsbenchmark/a4f/classroom/inv9/classroom_inv9_57.als@-@3599.932@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_58.alsbenchmark/a4f/classroom/inv9/classroom_inv9_58.als@-@3599.906@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_59.alsbenchmark/a4f/classroom/inv9/classroom_inv9_59.als@-@3599.937@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_5.alsbenchmark/a4f/classroom/inv9/classroom_inv9_5.als@-@3599.92@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_60.alsbenchmark/a4f/classroom/inv9/classroom_inv9_60.als@-@3599.93@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_61.alsbenchmark/a4f/classroom/inv9/classroom_inv9_61.als@-@3599.943@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_62.alsbenchmark/a4f/classroom/inv9/classroom_inv9_62.als@-@3599.928@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_63.alsbenchmark/a4f/classroom/inv9/classroom_inv9_63.als@-@3599.928@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_6.alsbenchmark/a4f/classroom/inv9/classroom_inv9_6.alsbenchmark/a4f/classroom/inv9/classroom_inv9_6.als@one ((Class & (*(Tutors) . Group))) <=> lone (((Teacher -> c) & Teaches))@49.557@R
+benchmark/a4f/classroom/inv9/classroom_inv9_7.alsbenchmark/a4f/classroom/inv9/classroom_inv9_7.alsbenchmark/a4f/classroom/inv9/classroom_inv9_7.als@ (lone (((Teacher -> c) & Teaches)))@0.665@M@3
+benchmark/a4f/classroom/inv9/classroom_inv9_8.alsbenchmark/a4f/classroom/inv9/classroom_inv9_8.als@-@3599.933@F@-
+benchmark/a4f/classroom/inv9/classroom_inv9_9.alsbenchmark/a4f/classroom/inv9/classroom_inv9_9.als@-@3599.927@F@-

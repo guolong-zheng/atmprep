@@ -44,7 +44,7 @@ import static parser.ast.ExprnBinaryBool.Op.*;
 public class PatcherTest {
     static int max = 1; // max # of instances
 
-    static int maxdepth = 2;
+    static int maxdepth = 3;
 
     static CompModule world;
 
@@ -81,114 +81,138 @@ public class PatcherTest {
         opt.path = path;
         opt.max_inst = max;
         opt.exprn_depth = maxdepth;
-
+        opt.is_prune = false;
 
         // get fault localization
         Locator locator = new Locator();
         locator.localize(model, world, 5);
 
+        if(locator.result.size() == 0) {
+            System.out.println("@-@-@NoFL@-");
+            System.exit(0);
+        }
+
         for (Exprn exprn : locator.result) {
+           // System.out.println("faulty expression: " + exprn);
             faultyExprn = exprn;
+            find_repair();
+        }
+        System.out.println("@-@-@NotFind@-");
+    }
 
-            // first try simple mutations
-            LOGGER.logInfo(atrepair.class, "bug expression: " + faultyExprn);
 
-            ExprMutator mutator = new ExprMutator(opt, faultyExprn, new RepairReporter(false));
+    public static void find_repair(){
+        // first try simple mutations
+        LOGGER.logInfo(atrepair.class, "bug expression: " + faultyExprn);
 
-            LOGGER.logDebug(atrepair.class, "checking mutations with bound");
+        ExprMutator mutator = new ExprMutator(opt, faultyExprn, new RepairReporter(false));
 
-            mutator.mutate();
+//        System.out.println(faultyExprn);
+//        System.exit(0);
 
-            if (mutator.rep.isfix) {
-                LOGGER.logInfo(atrepair.class, "fix found:\n" + model.toString());
-            } else {
-                LOGGER.logInfo(atrepair.class, "no fix found by mutation, searching templates.\n");
+        LOGGER.logDebug(atrepair.class, "checking mutations with bound");
 
-                VarCollector vc = new VarCollector(model);
-                Set<Var> livevars = vc.collectDeclVars(faultyExprn);
-                LOGGER.logInfo(atrepair.class, "live variables: " + livevars);
+        mutator.mutate();
 
-                tmp = new TemplateModelPrinter(model, faultyExprn);
-                tmp.print();
+        if (mutator.rep.isfix) {
+            LOGGER.logInfo(atrepair.class, "fix found:\n" + model.toString());
+            return;
+        } else {
+            LOGGER.logInfo(atrepair.class, "searching templates.\n");
 
-                // generate all relational expressions
-                RelationExprSynthesizer exprSynthesizer = new RelationExprSynthesizer(opt.exprn_depth, 3);
-                exprSynthesizer.synth(vc.sigNfield);
-                ASolution.type2exprns = exprSynthesizer.groupByType();
+            // collect live variables
+            VarCollector vc = new VarCollector(model);
+            Set<Var> livevars = vc.collectDeclVars(faultyExprn);
+            LOGGER.logInfo(atrepair.class, "live variables: " + livevars);
 
-                LOGGER.logDebug(atrepair.class, "# of relational types: " + ASolution.type2exprns.keySet().size());
-                ASolution.type2exprns.forEach((k, v) -> {
-                    LOGGER.logDebug(PatcherTest.class, k + "," + v.size() + ": ");
-                    LOGGER.logDebug(PatcherTest.class, v.toString());
-                });
+            // generate all relational expressions
+            RelationExprSynthesizer exprSynthesizer = new RelationExprSynthesizer(opt.exprn_depth, 3);
+            exprSynthesizer.synth(vc.sigNfield);
+//            System.out.println(vc.sigNfield);
+//            System.exit(0);
 
-                // generates solutions and evaluation each expression
-                List<SolutionPair> solutions = generateInstances(world, model, max);
-                for (SolutionPair sol : solutions) {
-                    sol.cex.evalAllExprns();
-                    sol.sat.evalAllExprns();
+            ASolution.type2exprns = exprSynthesizer.groupByType();
+
+            LOGGER.logDebug(atrepair.class, "# of relational types: " + ASolution.type2exprns.keySet().size());
+            ASolution.type2exprns.forEach((k, v) -> {
+                LOGGER.logDebug(PatcherTest.class, k + "," + v.size() + ": ");
+                LOGGER.logDebug(PatcherTest.class, v.toString());
+            });
+
+//            ASolution.type2exprns.forEach((k, v) -> {
+//                System.out.println(k + "," + v.size() + ": ");
+//                System.out.println(v.toString());
+//            });
+//            System.exit(0);
+
+            // generates solutions and evaluation each expression
+            List<SolutionPair> solutions = generateInstances(world, model, max);
+            for (SolutionPair sol : solutions) {
+                sol.cex.evalAllExprns();
+                sol.sat.evalAllExprns();
+            }
+
+            TemplateModelPrinter tmp = new TemplateModelPrinter(model, faultyExprn);
+            tmp.print();
+
+            parser.ast.Node cur_parent = faultyExprn;
+            parser.ast.Node nxt_parent = cur_parent.parent;
+            while (nxt_parent instanceof Exprn) {
+                nxt_parent = nxt_parent.parent;
+                cur_parent = cur_parent.parent;
+            }
+
+            TemplateModelPrinter tmp_replace_all = new TemplateModelPrinter(model, (Exprn) cur_parent);
+            tmp_replace_all.print();
+
+
+            template_repair(solutions, livevars, tmp, tmp_replace_all);
+
+        }
+    }
+
+    public static void template_repair(List<SolutionPair> solutions, Set<Var> livevars, TemplateModelPrinter tmp, TemplateModelPrinter tmp_replace_all){
+
+        // generate seed templates
+        SeedGenerator mg = new SeedGenerator();
+
+        // generate templates with only boolean operators, no logic operators
+        List<Seed> seeds = mg.generate(world, model, solutions, opt.init_inst, opt);
+        LOGGER.logDebug(PatcherTest.class, "candidate template seeds: ");
+
+        Set<String> visited = new HashSet<>();
+
+        // prune each seed template
+        for (Seed seed : seeds) {
+            LOGGER.logDebug(PatcherTest.class, seed.exprn.toString());
+
+            List<Hole> searchingholes = new ArrayList<>();
+            for (Hole hole : seed.holes) {
+                if (!hole.is_atom && !hole.is_exprn) {
+                    searchingholes.add(hole);
+                    hole.setValues(seed.solutions.cex.type2vals.get(hole.getType()));
                 }
+            }
+            SearchStat init_state = new SearchStat(searchingholes);
 
-                // generate seed templates
-                SeedGenerator mg = new SeedGenerator();
-                List<Seed> seeds = mg.generate(world, model, solutions, opt.init_inst);
-                LOGGER.logDebug(PatcherTest.class, "candidate template seeds: ");
-
-                Set<String> visited = new HashSet<>();
-
-                // prune each seed template
-                for (Seed seed : seeds) {
-                    LOGGER.logDebug(PatcherTest.class, seed.exprn.toString());
-                    List<Hole> searchingholes = new ArrayList<>();
-                    for (Hole hole : seed.holes) {
-                        if (!hole.is_atom && !hole.is_exprn) {
-                            searchingholes.add(hole);
-                            hole.setValues(seed.solutions.cex.type2vals.get(hole.getType()));
-                        }
-                    }
-                    SearchStat init_state = new SearchStat(searchingholes);
-
-                    while (init_state.hasNext()) {
-                        SeedPrinter sp = new SeedValuePrinter(seed, init_state);
-                        String str = sp.instantiate();
-                        if (seed.solutions.is_diff(str.replaceAll(",", "+"))) {
-                            //  System.out.println(str);
-                            if (!visited.contains(str)) {
-                                //System.out.println(str);
-                                check_fix(seed, init_state, livevars);
-                            }
-                        }
-                        init_state.nextStat();
+            while (init_state.hasNext()) {
+                SeedPrinter sp = new SeedValuePrinter(seed, init_state);
+                String str = sp.instantiate();
+                if (seed.solutions.is_diff(str.replaceAll(",", "+"))) {
+                    if (!visited.contains(str)) {
+                        RepairReporter rep = check_fix(seed, init_state, livevars, tmp, tmp_replace_all);
                     }
                 }
+                init_state.nextStat();
             }
         }
     }
 
-    public static List<String> patch(String expr, String fault) {
-        List<String> patchexprn = new ArrayList<>();
-        patchexprn.add(expr);
-
-        ExprnBinaryBool.Op[] symops = {IFF, AND, OR};
-        ExprnBinaryBool.Op[] asymops = {IMPLIES};
-
-        for (ExprnBinaryBool.Op op : symops) {
-            patchexprn.add(expr + op + fault);
-        }
-        for (ExprnBinaryBool.Op op : asymops) {
-            patchexprn.add(expr + op + fault);
-            patchexprn.add(fault + op + expr);
-        }
-        return patchexprn;
-    }
-
-    public static RepairReporter check_fix(Seed seed, SearchStat ss, Set<Var> lives) {
+    public static RepairReporter check_fix(Seed seed, SearchStat ss, Set<Var> lives, TemplateModelPrinter tmp, TemplateModelPrinter tmp_replace_all) {
 
         SeedExprnPrinter sep = new SeedExprnPrinter(seed);
         sep.instantiate(ss, lives);
 
-        TemplateModelPrinter tmp = new TemplateModelPrinter(model, faultyExprn);
-        tmp.print();
         for (StringBuilder sb : sep.results) {
             String exprnstr = sb.toString();
             for (String patch : patch(exprnstr, faultyExprn.toString())) {
@@ -203,38 +227,58 @@ public class PatcherTest {
                             if (cmd.check) {
                                 if (a4sol.satisfiable()) {
                                     repaired = false;
-                                    return new RepairReporter(false);
+                                    break;
                                 }
                             } else {
                                 if (!a4sol.satisfiable()) {
                                     repaired = false;
-                                    return new RepairReporter(false);
+                                    break;
                                 }
                             }
                         }
                     }
                     if (repaired) {
-                        System.out.print(opt.path + "@" + exprnstr + "@" + LOGGER.getTime()/1000.0 + "@R");
-                        Expr e = CompUtil.parseOneExpression_fromString(world, exprnstr);
-                        Exprn en = Exprn.parseExpr(null, e);
-
-                        BracketStringInputParser parser = new BracketStringInputParser();
-                        SeedTreePrinter stp = new SeedTreePrinter(seed);
-                        String f = stp.generateString(faultyExprn);
-                        String t = stp.generateString(en);
-
-                        Node<StringNodeData> t1 = parser.fromString(f);
-                        Node<StringNodeData> t2 = parser.fromString(t);
-                        APTED<StringUnitCostModel, StringNodeData> apted = new APTED<>(new StringUnitCostModel());
-                        int distance = (int)apted.computeEditDistance(t1, t2);
-                        System.out.println("@" + distance);
+                        //System.out.println("repaired model:\n"+modelstr);
+                        System.out.println(opt.path + "@" + patch + "@" + LOGGER.getTime()/1000.0 + "@R");
                         System.exit(0);
-                        return new RepairReporter(modelstr, exprnstr);
+                        return new RepairReporter(modelstr, patch);
                     }
                 } catch (Err err) {
                     // err.printStackTrace();
-                    return new RepairReporter(false);
+                    //return new RepairReporter(false);
                 }
+            }
+
+            String replace_all_str = tmp_replace_all.pre + exprnstr + tmp_replace_all.append;
+            try {
+                Boolean repaired = true;
+                A4Reporter rep = new A4Reporter();
+                CompModule cm = CompUtil.parseEverything_fromString(rep, replace_all_str);
+                for (Command cmd : cm.getAllCommands()) {
+                    if (cmd.label.contains("repair")) {
+                        A4Solution a4sol = TranslateAlloyToKodkod.execute_command(rep, cm.getAllReachableSigs(), cmd, new A4Options());
+                        if (cmd.check) {
+                            if (a4sol.satisfiable()) {
+                                repaired = false;
+                                break;
+                            }
+                        } else {
+                            if (!a4sol.satisfiable()) {
+                                repaired = false;
+                                break;
+                            }
+                        }
+                    }
+                }
+                if (repaired) {
+                    //System.out.println("repaired model:\n"+replace_all_str);
+                    System.out.println(opt.path + "@" + exprnstr + "@" + LOGGER.getTime()/1000.0 + "@R");
+                    System.exit(0);
+                    return new RepairReporter(replace_all_str, exprnstr);
+                }
+            } catch (Err err) {
+                // err.printStackTrace();
+                //return new RepairReporter(false);
             }
         }
         return new RepairReporter(false);
@@ -413,6 +457,23 @@ public class PatcherTest {
             return new RepairReporter(false);
         }
         return new RepairReporter(false);
+    }
+
+    public static List<String> patch(String expr, String fault) {
+        List<String> patchexprn = new ArrayList<>();
+        patchexprn.add(expr);
+
+        ExprnBinaryBool.Op[] symops = {IFF, AND, OR};
+        ExprnBinaryBool.Op[] asymops = {IMPLIES};
+
+        for (ExprnBinaryBool.Op op : symops) {
+            patchexprn.add(expr + op + fault);
+        }
+        for (ExprnBinaryBool.Op op : asymops) {
+            patchexprn.add(expr + op + fault);
+            patchexprn.add(fault + op + expr);
+        }
+        return patchexprn;
     }
 
 }

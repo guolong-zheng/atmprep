@@ -26,13 +26,16 @@ pred ClassHierarchy() {
   AllExtObject
 }
 
-run ClassHierarchy for 3
+//run ClassHierarchy for 3
 
-assert repair_assert_1 {
-  Acyclic <=> no c: Class | c in c.^ext
+assert repair_assert_1{
+	Acyclic <=>
+	no c: Class | c in c.^ext
 }
- check repair_assert_1
-pred repair_pred_1 {
-  Acyclic <=> no c: Class | c in c.^ext
+check repair_assert_1
+
+pred repair_pred_1{
+	Acyclic and
+	no c: Class | c in c.^ext
 }
- run repair_pred_1
+run repair_pred_1

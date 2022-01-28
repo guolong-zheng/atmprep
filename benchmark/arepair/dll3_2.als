@@ -25,7 +25,8 @@ fact Acyclic {
 
 pred UniqueElem() {
   // Unique nodes contain unique elements.
-  all n:Node | all n2:Node | n != n2 => n.elem != n2.elem
+  // Fix: replace "all n:Node | n.pre.elem & n.nxt.elem = none" with "all n:Node | all n2:Node | n != n2 => n.elem != n2.elem".
+  all n:Node | n.pre.elem & n.nxt.elem = none
 }
 
 pred Sorted() {
@@ -47,11 +48,16 @@ pred RepOk() {
   ConsistentPreAndNxt
 }
 
-assert repair_assert_1 {
-  ConsistentPreAndNxt <=> nxt = ~pre
+//run RepOk for 3
+
+assert repair_assert_2{
+	UniqueElem <=>
+all n:Node | all n2:Node | n != n2 => n.elem != n2.elem
 }
- check repair_assert_1
-pred repair_pred_1 {
-  ConsistentPreAndNxt <=> nxt = ~pre
+check repair_assert_2
+
+pred repair_pred_2{
+UniqueElem <=>
+all n:Node | all n2:Node | n != n2 => n.elem != n2.elem
 }
- run repair_pred_1
+run repair_pred_2

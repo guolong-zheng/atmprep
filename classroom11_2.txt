@@ -1,0 +1,49 @@
+benchmark/a4f/classroom/inv11_2/classroom_inv11_51.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_51.als@-@3599.923@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_52.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_52.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_52.als@some (((Class - (Teacher . Teaches)) . Groups)) <=> some (((Teaches . c) . Groups))@1734.511@R
+benchmark/a4f/classroom/inv11_2/classroom_inv11_53.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_53.als@-@3599.931@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_54.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_54.als@-@3599.918@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_55.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_55.als@-@3599.937@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_56.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_56.als@-@3599.931@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_57.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_57.als@-@3599.927@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_58.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_58.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_58.als@no (((Class - (Teacher . Teaches)) . Groups))@1318.102@R
+benchmark/a4f/classroom/inv11_2/classroom_inv11_59.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_59.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_59.als@no (((Class - (Teacher . Teaches)) . Groups))@2962.137@R
+benchmark/a4f/classroom/inv11_2/classroom_inv11_60.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_60.als@-@3599.932@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_61.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_61.als@-@3599.92@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_62.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_62.als@-@3599.924@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_63.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_63.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_63.als@no (((Class - (Teacher . Teaches)) . Groups))@1582.157@R
+benchmark/a4f/classroom/inv11_2/classroom_inv11_64.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_64.als@-@3599.93@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_65.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_65.als@-@3599.92@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_66.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_66.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_66.als@no (((Class - (Teacher . Teaches)) . Groups))@1806.084@R
+benchmark/a4f/classroom/inv11_2/classroom_inv11_67.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_67.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_67.als@no (((Class - (Teacher . Teaches)) . Groups))@1868.504@R
+benchmark/a4f/classroom/inv11_2/classroom_inv11_68.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_68.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_68.als@some (c . (Groups . Group)) => (some (Groups) => some (((Teaches . c) :> Teacher)))@1129.555@R
+benchmark/a4f/classroom/inv11_2/classroom_inv11_69.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_69.als@-@3599.935@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_70.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_70.als@-@3599.935@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_71.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_71.als@-@3599.94@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_72.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_72.als@-@3599.95@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_73.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_73.als@-@3599.932@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_74.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_74.als@-@3599.93@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_75.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_75.als@-@3599.94@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_76.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_76.als@-@3599.943@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_77.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_77.als@-@3599.924@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_78.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_78.als@-@3599.933@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_79.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_79.als@-@3599.928@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_80.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_80.als@-@3599.927@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_81.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_81.als@-@3599.928@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_82.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_82.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_82.als@no (((Class - (Teacher . Teaches)) . Groups))@1541.669@R
+benchmark/a4f/classroom/inv11_2/classroom_inv11_83.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_83.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_83.als@some (c . (Groups . Group)) && (c in (t . Teaches))@1924.341@R
+benchmark/a4f/classroom/inv11_2/classroom_inv11_84.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_84.als@-@-@NoFL@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_85.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_85.als@-@3599.937@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_86.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_86.als@-@3599.933@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_87.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_87.als@-@3599.93@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_88.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_88.als@-@-@NoFL@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_89.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_89.als@-@3599.934@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_90.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_90.als@-@-@NoFL@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_91.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_91.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_91.als@no (((Class - (Teacher . Teaches)) . Groups))@1886.06@R
+benchmark/a4f/classroom/inv11_2/classroom_inv11_92.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_92.als@-@-@NoFL@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_93.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_93.als@-@-@NoFL@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_94.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_94.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_94.als@no (((Class - (Teacher . Teaches)) . Groups))@1975.747@R
+benchmark/a4f/classroom/inv11_2/classroom_inv11_95.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_95.als@-@3599.949@F@-
+benchmark/a4f/classroom/inv11_2/classroom_inv11_96.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_96.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_96.als@some (c . (Groups . Group)) && (c in (t . Teaches))@2411.417@R
+benchmark/a4f/classroom/inv11_2/classroom_inv11_97.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_97.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_97.als@some (c . (Groups . Group)) && (c in (t . Teaches))@1841.779@R
+benchmark/a4f/classroom/inv11_2/classroom_inv11_98.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_98.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_98.als@no (((Class - (Teacher . Teaches)) . Groups))@1305.394@R
+benchmark/a4f/classroom/inv11_2/classroom_inv11_99.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_99.alsbenchmark/a4f/classroom/inv11_2/classroom_inv11_99.als@no (((Class - (Teacher . Teaches)) . Groups))@1149.122@R

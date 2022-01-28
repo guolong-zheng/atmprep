@@ -316,7 +316,7 @@ pred weaklyConnected {
  -- { all x, y : Node | x->y in adj implies y->x not in adj and Node in x.^adj + x + ^adj.x}   --incorrect 	135
  -- { all x, y : Node | x->y in adj or y->x in adj}   --incorrect 	136
  -- { Node in Node.^adj}   --incorrect 	137
- some adjall n : Node | Node in n.^(adj + ~adj)}
+ all n : Node | Node in n.^(adj + ~adj)}
 
 /*
 The graph is strongly connected, ie, it is possible to reach every node from every node considering edge direction.

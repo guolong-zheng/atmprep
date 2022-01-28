@@ -40,7 +40,7 @@ public class Opens extends Node {
     }
 
     public void toString(StringBuilder sb) {
-        sb.append("open " + filename + "\n");
+        sb.append("open " + filename );
     }
 
     public String getAlias() {

@@ -8,7 +8,7 @@ import java.util.Set;
 
 public class runall {
     public static void main(String[] args){
-        String path = "benchmark/a4f/graphs/";
+        String path = "benchmark/a4f/classroom/";
         final File folder = new File(path);
         Set<String> visited = new HashSet<>();
 
@@ -19,7 +19,7 @@ public class runall {
 //                start = true;
           //  if (start) {
 
-        //     atrepair.runone(modelPath);
+            atrepair.runone(modelPath);
             //}
         }
     }

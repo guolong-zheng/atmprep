@@ -25,6 +25,19 @@ pred Loop (This : List){
     no This.header || one n:This.header.*link | n.link in n
 }
 
+
+assert repair_assert_1 {
+	all l: List | Loop[l] <=> {
+	no l.header or one n: l.header.*link | n = n.link
+}}
+check  repair_assert_1
+
+pred repair_pred_1 {
+	all l: List | Loop[l] <=> {
+	no l.header or one n: l.header.*link | n = n.link
+}}
+run repair_pred_1
+
 // Correct
 pred Sorted(This: List){
     all n:This.header.*link | some n.link => n.elem <= n.link.elem
@@ -50,11 +63,7 @@ pred Contains(This: List, x: Int, result: Boolean) {
     x in This.header.*link.elem => result = True else result = False
 }
 
-assert repair_assert_1 {
-  all l : List | Loop[l] <=> (no l.header || one n : l.header.*link | n.^link = n.*link)
+fact IGNORE {
+  one List
+  List.header.*link = Node
 }
- check repair_assert_1
-pred repair_pred_1 {
-  all l : List | Loop[l] <=> (no l.header || one n : l.header.*link | n.^link = n.*link)
-}
- run repair_pred_1

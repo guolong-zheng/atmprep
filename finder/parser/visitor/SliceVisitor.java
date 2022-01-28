@@ -72,6 +72,9 @@ public class SliceVisitor implements VoidVisitor {
     * */
     @Override
     public void visit(Predicate pred) {
+        if(pred.getName().endsWith("OK") || pred.getName().endsWith("ok") || pred.getName().endsWith("Ok")){
+            return;
+        }
         if(pred.getName().contains("CanEnter")){
            return;
         }

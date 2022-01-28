@@ -433,7 +433,7 @@ assert transitiveRepaired {
  check weaklyConnectedRepaired expect 0
  check stonglyConnectedRepaired expect 0
  check transitiveRepaired expect 0
-pred repair_pred_1{noloops[] iff noloopsOK[] }
+pred repair_pred_1{noLoops[] iff noLoopsOK[] }
 run repair_pred_1
-assert repair_assert_1{noloops[] iff noloopsOK[] }
+assert repair_assert_1{noLoops[] iff noLoopsOK[] }
 check repair_assert_1

@@ -1,1 +1,0 @@
- all p0: Node, p1:Node | n = p0.(left+right) and p0 != p1 => (n != p1.left) and (n != p1.right)

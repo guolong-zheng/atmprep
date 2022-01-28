@@ -30,7 +30,8 @@ fact Acyclic {
 pred Sorted() {
   all n:Node {
     // All elements in the n's left subtree are smaller than the n's elem.
-    all n2:n.left.*(left + right) | n2.elem < n.elem
+    // Fix: replace "n.^left" with "n.left.*(left + right)".
+    all n2:n.^left | n2.elem < n.elem
     // All elements in the n's right subtree are bigger than the n's elem.
     // Fix: replace "n.^right" with "n.right.*(left + right)".
     all n2:n.^right | n2.elem > n.elem
@@ -53,32 +54,30 @@ pred Balanced() {
   // Multiplying depth differences by the signum to get rid of negatives.
   // Is there an absolute value in alloy?
   all n1, n2: Node {
-    (HasAtMostOneChild[n1] && HasAtMostOneChild[n2]) => (mul[signum[minus[Depth[n1], Depth[n2]]], minus[Depth[n1], Depth[n2]]] <= 1)
+    // Fix: replace "<=>" with "=>".
+    (HasAtMostOneChild[n1] && HasAtMostOneChild[n2]) <=> (mul[signum[minus[Depth[n1], Depth[n2]]], minus[Depth[n1], Depth[n2]]] <= 1)
   }
 }
 
-pred RepOk() {
-  Sorted
-  Balanced
-}
 
-run RepOk for 5
-
-assert repair_assert_1 {
-  Sorted <=> {
-      all n : Node {
-        all nl: n.left.*(left + right) | nl.elem < n.elem
-        all nr: n.right.*(left + right) | nr.elem > n.elem
-      }
-   }
-}
- check repair_assert_1
-pred repair_pred_1 {
-  Sorted <=> {
-    all n : Node {
-      all nl: n.left.*(left + right) | nl.elem < n.elem
-      all nr: n.right.*(left + right) | nr.elem > n.elem
+assert repair_assert_1{
+	Sorted <=>
+    {
+      all n:Node {
+          all n2: n.right.*(left + right) | n2.elem < n.elem
+          all n2: n.right.*(left + right) | n2.elem > n.elem
+        }
     }
-  }
 }
- run repair_pred_1
+check repair_assert_1
+
+pred repair_pred_1{
+		Sorted <=>
+        {
+          all n:Node {
+              all n2: n.right.*(left + right) | n2.elem < n.elem
+              all n2: n.right.*(left + right) | n2.elem > n.elem
+            }
+        }
+}
+run repair_pred_1

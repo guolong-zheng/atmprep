@@ -1,1 +1,0 @@
-all i:Int | i>=0 and i<Array.length

@@ -15,11 +15,11 @@
 
 package edu.mit.csail.sdg.alloy4;
 
-import javax.swing.SwingUtilities;
-import com.apple.eawt.Application;
-import com.apple.eawt.ApplicationAdapter;
-import com.apple.eawt.ApplicationEvent;
-import com.apple.eawt.ApplicationListener;
+//import javax.swing.SwingUtilities;
+//import com.apple.eawt.Application;
+//import com.apple.eawt.ApplicationAdapter;
+//import com.apple.eawt.ApplicationEvent;
+//import com.apple.eawt.ApplicationListener;
 
 /** This class provides better integration on Mac OS X.
  *
@@ -35,10 +35,10 @@ public final class MacUtil {
    private MacUtil() { }
 
    /** The cached Application object. */
-   private static Application app = null;
+  // private static Application app = null;
 
    /** The previous ApplicationListener (or null if there was none). */
-   private static ApplicationListener listener = null;
+  // private static ApplicationListener listener = null;
 
    /** Register a Mac OS X "ApplicationListener"; if there was a previous listener, it will be removed first.
     * @param reopen - when the user clicks on the Dock icon, we'll call reopen.run() using SwingUtilities.invokeLater
@@ -48,30 +48,30 @@ public final class MacUtil {
     */
    public synchronized static void registerApplicationListener
    (final Runnable reopen, final Runnable about, final Runner open, final Runnable quit) {
-      if (app == null) app = new Application(); else if (listener != null) app.removeApplicationListener(listener);
-      listener = new ApplicationAdapter() {
-         @Override public void handleReOpenApplication(ApplicationEvent arg) {
-            SwingUtilities.invokeLater(reopen);
-         }
-         @Override public void handleAbout(ApplicationEvent arg) {
-            arg.setHandled(true);
-            SwingUtilities.invokeLater(about);
-         }
-         @Override public void handleOpenFile(ApplicationEvent arg) {
-            final String filename = arg.getFilename();
-            SwingUtilities.invokeLater(new Runnable() {
-               public void run() { open.run(filename); }
-            });
-         }
-         @Override public void handleQuit(ApplicationEvent arg) {
-            try {
-               if (SwingUtilities.isEventDispatchThread()) quit.run(); else SwingUtilities.invokeAndWait(quit);
-            } catch (Throwable e) {
-               // Nothing we can do; we're already trying to quit!
-            }
-            arg.setHandled(false);
-         }
-      };
-      app.addApplicationListener(listener);
+//      if (app == null) app = new Application(); else if (listener != null) app.removeApplicationListener(listener);
+//      listener = new ApplicationAdapter() {
+//         @Override public void handleReOpenApplication(ApplicationEvent arg) {
+//            SwingUtilities.invokeLater(reopen);
+//         }
+//         @Override public void handleAbout(ApplicationEvent arg) {
+//            arg.setHandled(true);
+//            SwingUtilities.invokeLater(about);
+//         }
+//         @Override public void handleOpenFile(ApplicationEvent arg) {
+//            final String filename = arg.getFilename();
+//            SwingUtilities.invokeLater(new Runnable() {
+//               public void run() { open.run(filename); }
+//            });
+//         }
+//         @Override public void handleQuit(ApplicationEvent arg) {
+//            try {
+//               if (SwingUtilities.isEventDispatchThread()) quit.run(); else SwingUtilities.invokeAndWait(quit);
+//            } catch (Throwable e) {
+//               // Nothing we can do; we're already trying to quit!
+//            }
+//            arg.setHandled(false);
+//         }
+//      };
+//      app.addApplicationListener(listener);
    }
 }

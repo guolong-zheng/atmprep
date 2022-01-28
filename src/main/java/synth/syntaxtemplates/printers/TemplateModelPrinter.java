@@ -1,5 +1,6 @@
 package synth.syntaxtemplates.printers;
 
+import edu.mit.csail.sdg.alloy4compiler.parser.CompModule;
 import parser.ast.*;
 import utility.StringUtil;
 
@@ -9,6 +10,8 @@ public class TemplateModelPrinter extends TemplateCommandPrinter {
     }
 
     public void print() {
+        if(model.containopen)
+            sb.append(model.opened);
         model.getOpens().stream().forEach(open -> open.toString(sb));
         model.getSigDecls().stream().forEach(sigDef -> sigDef.toString(sb));
         model.getFacts().stream().forEach(fact -> fact.accept(this));

@@ -6,7 +6,8 @@ one sig Object extends Class {}
 
 pred ObjectNoExt() {
   // Object does not extend any class.
-  all c: Class | Object !in c.^~ext
+  // Fix: replace "c.^ext" with "c.^~ext" or "c.~^ext".
+  all c: Class | Object !in c.^ext
 }
 
 pred Acyclic() {
@@ -27,12 +28,15 @@ pred ClassHierarchy() {
   AllExtObject
 }
 
-run ClassHierarchy for 3
-assert repair_assert_1 {
-  AllExtObject <=> all c: Class - Object | c in Object.^~ext
+//run ClassHierarchy for 3
+
+assert repair_assert_1{
+	ObjectNoExt <=>  all c: Class | Object !in c.~^ext
 }
- check repair_assert_1
+check repair_assert_1
+
 pred repair_pred_1 {
-  AllExtObject <=> all c: Class - Object | c in Object.^~ext
+		ObjectNoExt <=>
+  all c: Class | Object !in c.~^ext
 }
- run repair_pred_1
+run repair_pred_1

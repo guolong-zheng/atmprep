@@ -12,7 +12,8 @@ fact Reachable {
   Element = Array.i2e[Int]
 }
 
-fact InBound {
+
+pred InBound {
   // All indexes should be greater than or equal to 0
   // and less than the array length
   all i:Array.i2e.Element | i >= 0
@@ -26,21 +27,27 @@ fact InBound {
   Array.length = #Element
 }
 
-pred NoConflict() {
+fact NoConflict {
   // Each index maps to at most on element
   all i:Array.i2e.Element | #Array.i2e[i] = 1
 }
 
-run NoConflict for 3
+//run NoConflict for 3
 
-assert repair_assert_1 {
- // Array.length != #Element
+assert repair_assert_1{
+ InBound <=> {
+  all i:Array.i2e.Element | i >= 0
+  all i:Array.i2e.Element | i < Array.length
   Array.length >= 0
+}
 }
 check repair_assert_1
 
 pred repair_pred_1{
- // Array.length != #Element
+  InBound and {
+  all i:Array.i2e.Element | i >= 0
+  all i:Array.i2e.Element | i < Array.length
   Array.length >= 0
+}
 }
 run repair_pred_1

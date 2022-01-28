@@ -34,13 +34,13 @@ fact Reachability {
   all s:(State - FSM.stop) | FSM.stop in s.*transition
 }
 
-run {} for 5
+//run {} for 5
+assert repair_assert_1{
+	all s: State | FSM.start !in s.transition
+}
+check repair_assert_1
 
-assert repair_assert_1 {
-  all s:State | FSM.start !in s.transition
+pred repair_pred_1{
+	all s: State | FSM.start !in s.transition
 }
- check repair_assert_1
-pred repair_pred_1 {
-  all s:State | FSM.start !in s.transition
-}
- run repair_pred_1
+run repair_pred_1

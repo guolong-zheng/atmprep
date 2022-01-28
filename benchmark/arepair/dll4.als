@@ -46,13 +46,16 @@ pred RepOk() {
   ConsistentPreAndNxt
 }
 
-run RepOk for 3
+//run RepOk for 3
 
-assert repair_assert_1 {
-  Sorted <=> all n : Node | some n.nxt => n.elem <= n.nxt.elem
+assert repair_assert_1{
+	Sorted <=>
+	all n : Node | some n.nxt => n.elem <= n.nxt.elem
 }
- check repair_assert_1
-pred repair_pred_1 {
-  Sorted <=> all n : Node | some n.nxt => n.elem <= n.nxt.elem
+check repair_assert_1
+
+pred repair_pred_1{
+	Sorted and
+	all n : Node | some n.nxt => n.elem <= n.nxt.elem
 }
- run repair_pred_1
+run repair_pred_1

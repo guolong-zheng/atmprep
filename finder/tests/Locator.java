@@ -46,13 +46,22 @@ public class Locator {
             List<InstancePair> ips = ig.genInstancePair(p.a, p.b, scope);
             for (InstancePair ip : ips) {
                 if (ip.bugType == BugType.NO_BUG) {
-                    continue  outloop;
+                    break;
                 }
                 if (ip.bugType == BugType.NO_EXPECT) {
                     result.addAll(ip.locations);
                     return;
                 }
             }
+
+            Iterator<InstancePair> instancePairIterator = ips.iterator();
+            while(instancePairIterator.hasNext()){
+                if(instancePairIterator.next().bugType == BugType.NO_BUG){
+                    instancePairIterator.remove();
+                }
+            }
+            if(ips.size() == 0)
+                return;
 
             for (InstancePair ip : ips) {
                     ip.findDiff();
@@ -69,6 +78,7 @@ public class Locator {
                 result.add(sv.loc);
                 return;
             }
+
             //System.out.println("related preds: " + sv.relatedPreds);
             // collect keywords
             // WordsCollector kc = new WordsCollector(sv.relatedPreds);

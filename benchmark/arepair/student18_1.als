@@ -16,14 +16,25 @@ fact CardinalityConstraints {
 
 // Underconstraint.  Should disallow header = l1 -> n1, no link
 pred Loop(This: List) {
-    no This.header || one n: This.header.*link | n.link = n
+    // Fix: replace "This.header.link" with "This.header".
+    no This.header.link || one n: This.header.*link | n.link = n
 }
 
 // Overconstraint.  Should allow no n.link
 pred Sorted(This: List) {
-    // Fix: replace "one n.link && n.elem <= n.link.elem" with "no n.link || n.elem <= n.link.elem".
-    all n: This.header.*link | one n.link && n.elem <= n.link.elem
+    // Fix: replace "one n.link && n.elem < n.link.elem" with "no n.link || n.elem <= n.link.elem".
+    all n: This.header.*link | one n.link && n.elem < n.link.elem
 }
+
+assert repair_assert_1 {
+	all l: List | Sorted[l] <=> { all n: l.header.*link | some n.link => n.elem <= n.link.elem
+}}
+check repair_assert_1
+
+pred repair_pred_1 {
+	all l: List | Sorted[l] <=> { all n: l.header.*link | some n.link => n.elem <= n.link.elem
+}}
+run repair_pred_1
 
 pred RepOk(This: List) {
     Loop[This]
@@ -33,7 +44,8 @@ pred RepOk(This: List) {
 // Underconstraint.  Should be && instead of ||
 pred Count(This: List, x: Int, result: Int) {
     RepOk[This]
-    result = #{n: Node | n in This.header.*link && n.elem = x}
+    // Fix: replace "||" with "&&".
+    result = #{n: Node | n in This.header.*link || n.elem = x}
 }
 
 abstract sig Boolean {}
@@ -45,11 +57,7 @@ pred Contains(This: List, x: Int, result: Boolean) {
     {some n: This.header.*link | n.elem = x} => result = True else result = False
 }
 
-assert repair_assert_1 {
-    all l : List | Sorted[l] <=> all n: l.header.*link | some n.link => n.elem <= n.link.elem
+fact IGNORE {
+  one List
+  List.header.*link = Node
 }
- check repair_assert_1
-pred repair_pred_1 {
-    all l : List | Sorted[l] <=> all n: l.header.*link | some n.link => n.elem <= n.link.elem
-}
- run repair_pred_1

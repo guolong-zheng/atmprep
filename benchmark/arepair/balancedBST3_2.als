@@ -29,8 +29,12 @@ fact Acyclic {
 
 pred Sorted() {
   all n:Node {
-    all n2:n.left.*(left + right) | n2.elem < n.elem
-    all n2:n.right.*(left + right) | n2.elem > n.elem
+    // All elements in the n's left subtree are smaller than the n's elem.
+    // Fix: replace "n.^left" with "n.left.*(left + right)".
+    all n2:n.^left | n2.elem < n.elem
+    // All elements in the n's right subtree are bigger than the n's elem.
+    // Fix: replace "n.^right" with "n.right.*(left + right)".
+    all n2:n.^right | n2.elem > n.elem
   }
 }
 
@@ -61,19 +65,20 @@ pred RepOk() {
 }
 
 run RepOk for 5
-assert repair_assert_1 {
-  Balanced <=> {
-    all n1, n2: Node {
+
+
+assert repair_assert_2{
+	Balanced <=>
+	 all n1, n2: Node {
     (HasAtMostOneChild[n1] && HasAtMostOneChild[n2]) => (mul[signum[minus[Depth[n1], Depth[n2]]], minus[Depth[n1], Depth[n2]]] <= 1)
   }
-  }
 }
- check repair_assert_1
-pred repair_pred_1 {
-  Balanced <=> {
-    all n1, n2: Node {
+check repair_assert_2
+
+pred repair_pred_2{
+	Balanced <=>
+	 all n1, n2: Node {
     (HasAtMostOneChild[n1] && HasAtMostOneChild[n2]) => (mul[signum[minus[Depth[n1], Depth[n2]]], minus[Depth[n1], Depth[n2]]] <= 1)
   }
-  }
 }
- run repair_pred_1
+run repair_pred_2

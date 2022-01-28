@@ -1,0 +1,56 @@
+benchmark/realbugs/addr1.alsbenchmark/realbugs/addr1.alsbenchmark/realbugs/addr1.als@one ((n . (b . listed)))@0.73@M@3
+benchmark/realbugs/arr1.alsbenchmark/realbugs/arr1.als@-@-@F@-
+benchmark/realbugs/arr2.alsbenchmark/realbugs/arr2.alsbenchmark/realbugs/arr2.als@((Array . length) >= #(Element))@1.883@M@3
+benchmark/realbugs/balancedBST1.alsbenchmark/realbugs/balancedBST1.alsbenchmark/realbugs/balancedBST1.als@lone ((n -> *(left)))@0.916@M@3
+benchmark/realbugs/balancedBST2_1.alsbenchmark/realbugs/balancedBST2_1.als@-@3599.942@F@-
+benchmark/realbugs/balancedBST2_2.alsbenchmark/realbugs/balancedBST2_2.alsbenchmark/realbugs/balancedBST2_2.als@lone ((n -> *(left)))@1.096@M@3
+benchmark/realbugs/balancedBST2_3.alsbenchmark/realbugs/balancedBST2_3.alsbenchmark/realbugs/balancedBST2_3.als@one ((n . (left + right)))@0.866@M@3
+benchmark/realbugs/balancedBST3_1.alsbenchmark/realbugs/balancedBST3_1.als@-@3599.943@F@-
+benchmark/realbugs/balancedBST3_2.alsbenchmark/realbugs/balancedBST3_2.alsbenchmark/realbugs/balancedBST3_2.als@((HasAtMostOneChild[n1] && HasAtMostOneChild[n2]) => (integer/mul[integer/signum[integer/minus[Depth[n1],Depth[n2]]],integer/minus[Depth[n1],Depth[n2]]] <= 1))@1.162@M@3
+benchmark/realbugs/bempl1.alsbenchmark/realbugs/bempl1.als@-@-@NoFL@-
+benchmark/realbugs/cd1_1.alsbenchmark/realbugs/cd1_1.alsbenchmark/realbugs/cd1_1.als@(Object !in (c . ^(~(ext))))@1.147@M@3
+benchmark/realbugs/cd1_2.alsbenchmark/realbugs/cd1_2.alsbenchmark/realbugs/cd1_2.als@Class = (*(ext) . Object)@276.672@R
+benchmark/realbugs/cd2.alsbenchmark/realbugs/cd2.alsbenchmark/realbugs/cd2.als@lone ((Class - (Class . ext))) || (c = (c . ext))@2.617@R
+benchmark/realbugs/ctree1.alsbenchmark/realbugs/ctree1.als@-@3599.929@F@-
+benchmark/realbugs/dll1_1.alsbenchmark/realbugs/dll1_1.alsbenchmark/realbugs/dll1_1.als@one (n . (nxt - (elem . ~(elem)))) => ((n . elem) < ((n . nxt) . elem))@1332.158@R
+benchmark/realbugs/dll1_2.alsbenchmark/realbugs/dll1_2.alsbenchmark/realbugs/dll1_2.als@lone (DLL) <=> (((n1 . nxt) = n2) <=> ((n2 . pre) = n1))@8.177@R
+benchmark/realbugs/dll2_1.alsbenchmark/realbugs/dll2_1.alsbenchmark/realbugs/dll2_1.als@one (n . (nxt - (elem . ~(elem)))) => ((n . elem) < ((n . nxt) . elem))@1305.1@R
+benchmark/realbugs/dll2_2.alsbenchmark/realbugs/dll2_2.als@-@3599.929@F@-
+benchmark/realbugs/dll3_1.alsbenchmark/realbugs/dll3_1.als@-@-@NoFL@-
+benchmark/realbugs/dll3_2.alsbenchmark/realbugs/dll3_2.alsbenchmark/realbugs/dll3_2.als@lone (n . (nxt . (elem . ~(elem))))@1128.298@R
+benchmark/realbugs/dll3_3.alsbenchmark/realbugs/dll3_3.als@-@3599.931@F@-
+benchmark/realbugs/dll4.alsbenchmark/realbugs/dll4.alsbenchmark/realbugs/dll4.als@one (n . (nxt - (elem . ~(elem)))) => (((n . nxt) . elem) > (n . elem))@1494.316@R
+benchmark/realbugs/fsm1_1.alsbenchmark/realbugs/fsm1_1.alsbenchmark/realbugs/fsm1_1.als@((s in (FSM . stop)) => ((s . transition) = none))@0.682@M@3
+benchmark/realbugs/fsm1_2.alsbenchmark/realbugs/fsm1_2.als@-@-@F@-
+benchmark/realbugs/fsm2.alsbenchmark/realbugs/fsm2.alsbenchmark/realbugs/fsm2.als@((FSM . start) = (FSM . stop))@0.729@M@3
+benchmark/realbugs/grade1.alsbenchmark/realbugs/grade1.alsbenchmark/realbugs/grade1.als@(s = (a . assistant_for))@0.911@M@3
+benchmark/realbugs/other1.alsbenchmark/realbugs/other1.als@-@-@NoFL@-
+benchmark/realbugs/student10.alsbenchmark/realbugs/student10.alsbenchmark/realbugs/student10.als@one ((n . link))@0.838@M@3
+benchmark/realbugs/student11.alsbenchmark/realbugs/student11.alsbenchmark/realbugs/student11.als@one (n . (link - (elem . ~(elem)))) => ((n . elem) < ((n . link) . elem))@966.515@R
+benchmark/realbugs/student12_1.alsbenchmark/realbugs/student12_1.als@-@3599.932@F@-
+benchmark/realbugs/student12_2.alsbenchmark/realbugs/student12_2.als@-@3599.923@F@-
+benchmark/realbugs/student13.alsbenchmark/realbugs/student13.als@-@3599.931@F@-
+benchmark/realbugs/student14_1.alsbenchmark/realbugs/student14_1.alsbenchmark/realbugs/student14_1.als@one (n . (link - (elem . ~(elem)))) => ((n . elem) < ((n . link) . elem))@673.82@R
+benchmark/realbugs/student14_2.alsbenchmark/realbugs/student14_2.als@-@3599.936@F@-
+benchmark/realbugs/student15.alsbenchmark/realbugs/student15.alsbenchmark/realbugs/student15.als@one (n . (link - (elem . ~(elem)))) => ((n . elem) < ((n . link) . elem))@510.511@R
+benchmark/realbugs/student16.alsbenchmark/realbugs/student16.als@-@3599.932@F@-
+benchmark/realbugs/student17_1.alsbenchmark/realbugs/student17_1.alsbenchmark/realbugs/student17_1.als@one (n . (link - (elem . ~(elem)))) => ((n . elem) < ((n . link) . elem))@550.778@R
+benchmark/realbugs/student17_2.alsbenchmark/realbugs/student17_2.als@-@3599.929@F@-
+benchmark/realbugs/student18_1.alsbenchmark/realbugs/student18_1.alsbenchmark/realbugs/student18_1.als@one (n . (link - (elem . ~(elem)))) <=> one ((n . link))@586.457@R
+benchmark/realbugs/student18_2.alsbenchmark/realbugs/student18_2.als@-@3599.934@F@-
+benchmark/realbugs/student18_3.alsbenchmark/realbugs/student18_3.alsbenchmark/realbugs/student18_3.als@no ((n . link))@1.948@M@3
+benchmark/realbugs/student19_1.alsbenchmark/realbugs/student19_1.alsbenchmark/realbugs/student19_1.als@one (n . (link - (elem . ~(elem)))) => ((n . elem) < ((n . link) . elem))@690.547@R
+benchmark/realbugs/student19_2.alsbenchmark/realbugs/student19_2.als@-@3599.923@F@-
+benchmark/realbugs/student1.alsbenchmark/realbugs/student1.alsbenchmark/realbugs/student1.als@lone (n . (link + (link . ~(link)))) || ((n . elem) <= ((n . link) . elem))@624.334@R
+benchmark/realbugs/student2_1.alsbenchmark/realbugs/student2_1.alsbenchmark/realbugs/student2_1.als@lone (n . (*(link) . elem)) || ((n . elem) <= ((n . link) . elem))@469.781@R
+benchmark/realbugs/student2_2.alsbenchmark/realbugs/student2_2.als@-@3599.932@F@-
+benchmark/realbugs/student3_1.alsbenchmark/realbugs/student3_1.alsbenchmark/realbugs/student3_1.als@no (n)@1.529@M@3
+benchmark/realbugs/student3_2.alsbenchmark/realbugs/student3_2.als@-@3599.945@F@-
+benchmark/realbugs/student4.alsbenchmark/realbugs/student4.alsbenchmark/realbugs/student4.als@lone (n . (*(link) . elem)) || ((n . elem) <= ((n . link) . elem))@619.985@R
+benchmark/realbugs/student5.alsbenchmark/realbugs/student5.alsbenchmark/realbugs/student5.als@lone (n . (*(link) . elem)) || ((n . elem) <= ((n . link) . elem))@492.864@R
+benchmark/realbugs/student6_1.alsbenchmark/realbugs/student6_1.alsbenchmark/realbugs/student6_1.als@one ((n . link))@0.927@M@3
+benchmark/realbugs/student6_2.alsbenchmark/realbugs/student6_2.als@-@3599.94@F@-
+benchmark/realbugs/student7_1.alsbenchmark/realbugs/student7_1.alsbenchmark/realbugs/student7_1.als@lone (n . (*(link) . elem)) || ((n . elem) <= ((n . link) . elem))@672.077@R
+benchmark/realbugs/student7_2.alsbenchmark/realbugs/student7_2.alsbenchmark/realbugs/student7_2.als@one (((link & *(elem)) . Node))@183.146@R
+benchmark/realbugs/student8.alsbenchmark/realbugs/student8.als@-@3599.932@F@-
+benchmark/realbugs/student9.alsbenchmark/realbugs/student9.als@-@3599.929@F@-

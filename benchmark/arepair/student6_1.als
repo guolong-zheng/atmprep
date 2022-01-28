@@ -7,25 +7,36 @@ sig Node {
     elem: set Int
 }
 
-// Overconstraint.  Should be lone l.header and lone n.link
+
 fact CardinalityConstraints {
     List.header.*link = Node
     all l: List | lone l.header
-    // Fix: replace "one" with "lone".
-    all n: Node | one n.link
+    all n: Node | lone n.link
     all n : Node | one n.elem
 }
 
 // Overconstraint.  no l.header should be fine.
 pred Loop(This: List) {
-    no This.header ||
+    // Fix: add "no This.header".
     one n:This.header.*link | n in n.^link
 }
 
 // Overconstraint.  Should allow no n.link.
 pred Sorted(This: List) {
-    all n : This.header.*link | some n.link => n.elem <= n.link.elem
+    // Fix: replace "n.elem <= n.link.elem" with "some n.link => n.elem <= n.link.elem"
+    all n : This.header.*link | n.elem <= n.link.elem
 }
+
+assert repair_assert_1 {
+	all l: List | Sorted[l] <=> { all n: l.header.*link | some n.link => n.elem <= n.link.elem
+}}
+check repair_assert_1
+
+pred repair_pred_1 {
+    
+	all l: List | Sorted[l] and { all n: l.header.*link | some n.link => n.elem <= n.link.elem
+}}
+run repair_pred_1
 
 pred RepOk(This: List){
     Loop[This]
@@ -46,11 +57,8 @@ pred Contains(This: List, x: Int, result: Boolean) {
      RepOk[This]
      x !in This.header.*link.elem <=> result = False
 }
-assert repair_assert_1 {
-    all n: Node | lone n.link
+
+fact IGNORE {
+  one List
+  List.header.*link = Node
 }
- check repair_assert_1
-pred repair_pred_1 {
-    some n : Node | no n.link
-}
- run repair_pred_1

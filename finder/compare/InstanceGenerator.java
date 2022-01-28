@@ -85,6 +85,7 @@ public class InstanceGenerator {
         List<InstancePair> res = new LinkedList<>();
 
         A4Solution counterExample = TranslateAlloyToKodkod.execute_command(rep, world.getAllReachableSigs(), asst, opt);
+
         for(int i = 0; i < total; i++) {
             if (!counterExample.satisfiable()) {
                 A4Solution expected = TranslateAlloyToKodkod.execute_command(rep, world.getAllReachableSigs(), pred, opt);

@@ -17,6 +17,8 @@ import synth.Patcher;
 import synth.SolutionPair;
 import synth.syntaxtemplates.template.hole.Hole;
 import synth.syntaxtemplates.template.hole.ValueHole;
+import tests.PatcherTest;
+import util.RepairOption;
 import utility.AlloyUtil;
 import utility.LOGGER;
 import utility.StringUtil;
@@ -29,7 +31,7 @@ import java.util.Set;
 public class SeedGenerator {
 
     // generate a list of seed templates
-    public List<Seed> generate(CompModule world, AModel model, List<SolutionPair> solutions, int max){
+    public List<Seed> generate(CompModule world, AModel model, List<SolutionPair> solutions, int max, RepairOption opt){
 
         List<Seed> seeds = new ArrayList<>();
 
@@ -59,9 +61,7 @@ public class SeedGenerator {
 
             List<Seed> potentialseeds = new ArrayList<>();
 
-            boolean prune = false;
-
-            if(prune) {
+            if(opt.is_prune) {
                 for (Seed m : booleanseeds) {
                     // rel expr in cex and sat that have different values
                     if (m.holes.size() == 1) {
@@ -127,7 +127,6 @@ public class SeedGenerator {
                             Exprn newe = copy(m.exprn, notchanged, tochange, changeto);
                             Seed new_seed = new Seed(newe, holes, ip);
                             potentialseeds.add(new_seed);
-
                             // }
                         }
                     }
@@ -210,7 +209,6 @@ public class SeedGenerator {
             Seed atomHole = new Seed(valueHole, valueHole, atom.type(), true, sols);
             // atom expressions like Node0
             atomseeds.add(atomHole);
-
             seeds.add(atomHole);
         }
 
@@ -226,7 +224,6 @@ public class SeedGenerator {
                 if(!restype.hasNoTuple()){
                     ExprnBinaryRel ebr = new ExprnBinaryRel( atomseed.holes.get(0), valueHole, ExprnBinaryRel.Op.JOIN, restype);
                     Seed atomrelseed = new Seed(ebr, atomseed.holes.get(0), valueHole, restype, sols);
-
                     seeds.add(atomrelseed);
                 }
             }
@@ -277,7 +274,7 @@ public class SeedGenerator {
 
                 if(left.getType().is_int() && right.getType().is_int())
                     metas.addAll( genBinaryInt( vals.get(i), vals.get(j), sols) );
-                else if( left.getType().equals(right.getType())) {
+                else if( left.getType().equals(right.getType()) || left.getType().isSubtypeOf(right.getType()) || right.getType().isSubtypeOf(left.getType())) {
                     metas.addAll(genBinaryRel(vals.get(i), vals.get(j), sols));
                 }
             }
@@ -291,6 +288,7 @@ public class SeedGenerator {
         ExprnBinaryBool eq = new ExprnBinaryBool(left.exprn, right.exprn, ExprnBinaryBool.Op.EQUALS);
         ExprnBinaryBool in = new ExprnBinaryBool(left.exprn, right.exprn, ExprnBinaryBool.Op.IN);
         ExprnBinaryBool notin = new ExprnBinaryBool(left.exprn, right.exprn, ExprnBinaryBool.Op.NOT_IN);
+        ExprnBinaryBool noteq = new ExprnBinaryBool(left.exprn, right.exprn, ExprnBinaryBool.Op.NOT_EQUALS);
 
         List<Hole> holes = new ArrayList<>();
         holes.addAll(left.holes);
@@ -299,10 +297,12 @@ public class SeedGenerator {
         Seed eqseed = new Seed(eq, holes, sols);
         Seed inseed = new Seed(in, holes, sols);
         Seed notinseed = new Seed(notin, holes, sols);
+        Seed noteqseed = new Seed(noteq, holes, sols);
 
         res.add(eqseed);
         res.add(inseed);
         res.add(notinseed);
+        res.add(noteqseed);
 
         return res;
     }

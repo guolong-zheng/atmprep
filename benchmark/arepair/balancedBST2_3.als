@@ -42,7 +42,6 @@ pred HasAtMostOneChild(n: Node) {
 
 fun Depth(n: Node): one Int {
   // The number of nodes from the tree's root to n.
-  
   #{n.*~(left + right)}
 }
 
@@ -55,22 +54,16 @@ pred Balanced() {
   }
 }
 
-pred RepOk() {
-  Sorted
-  Balanced
-}
+assert repair_assert_3 {
+	 Balanced <=>
+	{all n1, n2:Node|HasAtMostOneChild[n1] && HasAtMostOneChild[n2]
+	=> (let diff = minus[Depth[n1], Depth[n2]] | -1 <= diff && diff <= 1)
+}}
+check repair_assert_3
 
-assert repair_assert_1 {
-  Balanced <=> { all n1, n2 : Node {
-    (HasAtMostOneChild[n1] && HasAtMostOneChild[n2]) => (let diff = minus[Depth[n1], Depth[n2]] | -1 <= diff && diff <= 1)
-  }
-  }
-}
- check repair_assert_1
-pred repair_pred_1 {
-  Balanced <=> { all n1, n2 : Node {
-    (HasAtMostOneChild[n1] && HasAtMostOneChild[n2]) => (let diff = minus[Depth[n1], Depth[n2]] | -1 <= diff && diff <= 1)
-  }
-  }
-}
- run repair_pred_1
+pred repair_pred_3 {
+	 Balanced <=>
+	{all n1, n2:Node|HasAtMostOneChild[n1] && HasAtMostOneChild[n2]
+	=> (let diff = minus[Depth[n1], Depth[n2]] | -1 <= diff && diff <= 1)
+}}
+run repair_pred_3

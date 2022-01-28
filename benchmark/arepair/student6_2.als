@@ -7,7 +7,7 @@ sig Node {
     elem: set Int
 }
 
-// Overconstraint.  Should be lone l.header and lone n.link
+
 fact CardinalityConstraints {
     List.header.*link = Node
     all l: List | lone l.header
@@ -21,10 +21,21 @@ pred Loop(This: List) {
     one n:This.header.*link | n in n.^link
 }
 
-// Overconstraint.  Should allow no n.link.
 pred Sorted(This: List) {
-    all n : This.header.*link | some n.link => n.elem <= n.link.elem
+    all n : This.header.*link | n.elem <= n.link.elem
 }
+
+assert repair_assert_2 {
+	all l: List | Loop[l] <=> {
+	no l.header or one n: l.header.*link | n = n.link
+}}
+check repair_assert_2
+
+pred repair_pred_2 {
+	all l: List | Loop[l] <=> {
+	no l.header or one n: l.header.*link | n = n.link
+}}
+run repair_pred_2
 
 pred RepOk(This: List){
     Loop[This]
@@ -46,11 +57,7 @@ pred Contains(This: List, x: Int, result: Boolean) {
      x !in This.header.*link.elem <=> result = False
 }
 
-assert repair_assert_1 {
-  all l : List | Loop[l] <=> (no l.header || one n : l.header.*link | n.^link = n.*link)
+fact IGNORE {
+  one List
+  List.header.*link = Node
 }
- check repair_assert_1
-pred repair_pred_1 {
-  all l : List | Loop[l] <=> (no l.header || one n : l.header.*link | n.^link = n.*link)
-}
- run repair_pred_1

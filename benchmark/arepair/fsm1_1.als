@@ -26,8 +26,7 @@ fact ValidStartAndStop {
   FSM.start !in FSM.stop
 
   // No transition ends at the start state.
-  all s: State | FSM.start !in s.transition
-
+  all s : State | FSM.start !in s.transition
   // MV: If no transition then stop state
   // Fix: replace "=>" with "<=>".
   all s: State | s.transition = none => s in FSM.stop
@@ -42,13 +41,14 @@ fact Reachability {
   all s: State | FSM.stop in s.*transition
 }
 
-run {} for 5
+//run {} for 5
 
-assert repair_assert_1 {
-  all s: State | s.transition = none <=> s in FSM.stop
+assert repair_assert_1{
+	no FSM.stop.transition
 }
- check repair_assert_1
-pred repair_pred_1 {
-  all s: State | s.transition = none <=> s in FSM.stop
+check repair_assert_1
+
+pred repair_pred_1{
+	no FSM.stop.transition
 }
- run repair_pred_1
+run repair_pred_1

@@ -21,7 +21,8 @@ pred Loop(This: List) {
 
 // Overconstraint.  Should allow no n.link
 pred Sorted(This: List) {
-    all n:This.header.*link | some n.link => n.elem <= n.link.elem
+    // Fix: replace "n.elem < n.link.elem" with "some n.link => n.elem <= n.link.elem".
+    all n:This.header.*link | n.elem < n.link.elem
 }
 
 pred RepOk(This: List) {
@@ -41,26 +42,24 @@ pred Count(This: List, x: Int, result: Int) {
 abstract sig Boolean {}
 one sig True, False extends Boolean {}
 
-// Overconstraint.  Should allow no l.header
+// Correct.
 pred Contains(This: List, x: Int, result: Boolean) {
     RepOk[This]
-    ((some n: This.header.*link | x in n.elem) && result = True) || ((all n: This.header.*link | x !in n.elem) && result = False)
+    (some n: This.header.*link | x in n.elem && result = True) || (all n: This.header.*link | x !in n.elem && result = False)
+}
+
+fact IGNORE {
+  one List
+  List.header.*link = Node
 }
 
 assert repair_assert_1 {
-     all l : List | all x : Int | all result : Int |
-		Count[l, x, result] <=> {
-	 RepOk[l] and
-	 result = #{n: Node | n in l.header.*link && n.elem = x}}
-}
- check repair_assert_1
+	all l: List | Sorted[l] <=> { all n: l.header.*link | some n.link => n.elem <= n.link.elem
+}}
+check  repair_assert_1
+
 pred repair_pred_1 {
-     all l : List | some x : Int | some result : Int |
-        RepOk[l] and
-       {
-		Count[l, x, result] <=> (
-	 		result = #{n: Node | n in l.header.*link && n.elem = x}
-	  	)
-		}
-}
- run repair_pred_1
+	all l: List | Sorted[l] <=> { all n: l.header.*link | some n.link => n.elem <= n.link.elem
+}}
+run  repair_pred_1
+

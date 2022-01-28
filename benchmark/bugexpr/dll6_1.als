@@ -1,1 +1,0 @@
-{all n1: DLL.header.*nxt, n2: DLL.header.*nxt | n1 = n2 or n1.nxt = n2 <=> n2.pre = n1} and {all n1: DLL.header.*nxt | n1.pre != n1}

@@ -1,1 +1,0 @@
- all n1, n2: Node { #n1.left.^(left+right) <= #n1.right.^(left+right) + 1 and #n2.right.^(left+right) <= #n2.left.^(left+right) + 1}

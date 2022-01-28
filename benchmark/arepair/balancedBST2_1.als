@@ -28,10 +28,13 @@ fact Acyclic {
 pred Sorted() {
   all n: Node {
     // All elements in the n's left subtree are smaller than the n's elem.
-    all nl: n.left.*(left + right) | nl.elem < n.elem
+    // Fix: replace "some n.left =>n.left.elem<n.elem" with "all nl: n.left.*(left + right) | nl.elem < n.elem".
+    some n.left =>
+    n.left.elem<n.elem
     // All elements in the n's right subtree are bigger than the n's elem.
     // Fix: replace "some n.right =>n.right.elem>n.elem" with "all nr: n.right.*(left + right) | nr.elem > n.elem".
-    some n.right =>n.right.elem>n.elem
+    some n.right =>
+    n.right.elem>n.elem
   }
 }
 
@@ -43,6 +46,7 @@ pred HasAtMostOneChild(n: Node) {
 
 fun Depth(n: Node): one Int {
   // The number of nodes from the tree's root to n.
+  // Fix: replace "(#BinaryTree.root.*(left+right))-(#n.(left+right))" with "#{n.*~(left + right)}".
   #{n.*~(left + right)}
 }
 
@@ -50,30 +54,21 @@ pred Balanced() {
   all n1, n2: Node {
     // If n1 has at most one child and n2 has at most one child,
     // then the depths of n1 and n2 differ by at most 1.
+    // Fix: replace "lone (#n1.(left+right) - #n2.(left+right))" with "(HasAtMostOneChild[n1] && HasAtMostOneChild[n2]) => (let diff = minus[Depth[n1], Depth[n2]] | -1 <= diff && diff <= 1)".
     (HasAtMostOneChild[n1] && HasAtMostOneChild[n2]) => (let diff = minus[Depth[n1], Depth[n2]] | -1 <= diff && diff <= 1)
   }
 }
 
-pred RepOk() {
-  Sorted
-  Balanced
-}
+assert repair_assert_1{
+	Sorted <=>
+     all n: Node { {all nl: n.left.*(left + right) | nl.elem < n.elem}
+               and {all nr: n.right.*(left + right) | nr.elem > n.elem}
+}}
+check repair_assert_1
 
-assert repair_assert_1 {
-  Sorted <=> {
-      all n : Node {
-        all nl: n.left.*(left + right) | nl.elem < n.elem
-        all nr: n.right.*(left + right) | nr.elem > n.elem
-      }
-   }
-}
- check repair_assert_1
-pred repair_pred_1 {
-  Sorted <=> {
-    all n : Node {
-      all nl: n.left.*(left + right) | nl.elem < n.elem
-      all nr: n.right.*(left + right) | nr.elem > n.elem
-    }
-  }
-}
- run repair_pred_1
+pred repair_pred_1{
+	Sorted <=>
+     all n: Node { {all nl: n.left.*(left + right) | nl.elem < n.elem}
+               and {all nr: n.right.*(left + right) | nr.elem > n.elem}
+}}
+run repair_pred_1

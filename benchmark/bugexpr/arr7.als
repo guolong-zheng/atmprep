@@ -1,1 +1,0 @@
-length[Array] = #(Element)

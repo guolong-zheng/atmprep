@@ -98,9 +98,9 @@ public abstract class ExprnCall extends Exprn {
     @Override
     public String getInstantiatedString(Map<String, String> sig2vals){
         StringBuilder sb = new StringBuilder();
-        if(name.contains("order")){
-            System.out.println();
-        }
+//        if(name.contains("order")){
+//            System.out.println();
+//        }
         sb.append(StringUtil.removeThis( name ) + "[");
         int i = 0;
         for( Exprn arg : args ){
