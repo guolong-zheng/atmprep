@@ -93,7 +93,7 @@ public class PatcherTest {
         }
 
         for (Exprn exprn : locator.result) {
-           // System.out.println("faulty expression: " + exprn);
+            System.out.println("faulty expression: " + exprn);
             faultyExprn = exprn;
             find_repair();
         }

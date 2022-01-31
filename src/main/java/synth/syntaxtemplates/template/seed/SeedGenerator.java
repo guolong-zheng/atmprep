@@ -282,6 +282,14 @@ public class SeedGenerator {
         return metas;
     }
 
+    public List<Seed> getLogic(List<Seed> seeds, int depth){
+        List<Seed> res = new ArrayList<>();
+        ExprnBinaryBool.Op and = ExprnBinaryBool.Op.AND;
+        ExprnBinaryBool.Op or = ExprnBinaryBool.Op.OR;
+        ExprnBinaryBool.Op implies = ExprnBinaryBool.Op.IMPLIES;
+        ExprnBinaryBool.Op iff = ExprnBinaryBool.Op.IFF;
+        return res;
+    }
 
     public List<Seed> genBinaryRel(Seed left, Seed right, SolutionPair sols){
         List<Seed> res = new ArrayList<>();
