@@ -123,6 +123,7 @@ public class PatcherTest {
             // collect live variables
             VarCollector vc = new VarCollector(model);
             Set<Var> livevars = vc.collectDeclVars(faultyExprn);
+
             LOGGER.logInfo(atrepair.class, "live variables: " + livevars);
 
             // generate all relational expressions
@@ -213,10 +214,14 @@ public class PatcherTest {
         SeedExprnPrinter sep = new SeedExprnPrinter(seed);
         sep.instantiate(ss, lives);
 
+
         for (StringBuilder sb : sep.results) {
             String exprnstr = sb.toString();
+
             for (String patch : patch(exprnstr, faultyExprn.toString())) {
                 String modelstr = tmp.pre + patch + tmp.append;
+
+
                 try {
                     Boolean repaired = true;
                     A4Reporter rep = new A4Reporter();

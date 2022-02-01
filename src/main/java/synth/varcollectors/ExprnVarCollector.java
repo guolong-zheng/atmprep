@@ -49,6 +49,7 @@ public class ExprnVarCollector extends VoidVisitorWrapper {
             parent.accept(this);
         }
         usedvars.forEach((s,t) -> livevars.add(new Var(s, t)));
+        declvars.forEach((s,t) -> livevars.add(new Var(s, t)));
         return livevars;
     }
 

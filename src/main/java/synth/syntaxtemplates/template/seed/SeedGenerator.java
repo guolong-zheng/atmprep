@@ -15,6 +15,7 @@ import parser.ast.*;
 import synth.ASolution;
 import synth.Patcher;
 import synth.SolutionPair;
+import synth.syntaxtemplates.printers.SeedPrinter;
 import synth.syntaxtemplates.template.hole.Hole;
 import synth.syntaxtemplates.template.hole.ValueHole;
 import tests.PatcherTest;
@@ -58,6 +59,9 @@ public class SeedGenerator {
             List<Seed> booleanseeds = new ArrayList<>();
             booleanseeds.addAll( getUnarys(relexprns, ip) );
             booleanseeds.addAll( getBinarys(relexprns, ip) );
+
+            List<Seed> logicseeds = getLogic(booleanseeds, 0, ip);
+            booleanseeds.addAll( logicseeds );
 
             List<Seed> potentialseeds = new ArrayList<>();
 
@@ -282,12 +286,35 @@ public class SeedGenerator {
         return metas;
     }
 
-    public List<Seed> getLogic(List<Seed> seeds, int depth){
+    public List<Seed> getLogic(List<Seed> seeds, int depth, SolutionPair sols){
         List<Seed> res = new ArrayList<>();
-        ExprnBinaryBool.Op and = ExprnBinaryBool.Op.AND;
-        ExprnBinaryBool.Op or = ExprnBinaryBool.Op.OR;
-        ExprnBinaryBool.Op implies = ExprnBinaryBool.Op.IMPLIES;
-        ExprnBinaryBool.Op iff = ExprnBinaryBool.Op.IFF;
+
+        for(int i = 0; i < seeds.size(); i++){
+            for(int j = i + 1; j < seeds.size(); j++){
+                ExprnBinaryBool and = new ExprnBinaryBool(seeds.get(i).exprn, seeds.get(j).exprn, ExprnBinaryBool.Op.AND);
+                ExprnBinaryBool or = new ExprnBinaryBool(seeds.get(i).exprn, seeds.get(j).exprn, ExprnBinaryBool.Op.OR);
+                ExprnBinaryBool iff = new ExprnBinaryBool(seeds.get(i).exprn, seeds.get(j).exprn, ExprnBinaryBool.Op.IFF);
+               // ExprnBinaryBool implies1 = new ExprnBinaryBool(seeds.get(i).exprn, seeds.get(j).exprn, ExprnBinaryBool.Op.IMPLIES);
+               // ExprnBinaryBool implies2 = new ExprnBinaryBool(seeds.get(j).exprn, seeds.get(i).exprn, ExprnBinaryBool.Op.IMPLIES);
+
+                List<Hole> holes = new ArrayList<>();
+                holes.addAll(seeds.get(i).holes);
+                holes.addAll(seeds.get(j).holes);
+
+                Seed andseed = new Seed(and, holes, sols);
+                Seed orseed = new Seed(or, holes, sols);
+              //  Seed implies1seed = new Seed(implies1, holes, sols);
+              //  Seed implies2eed = new Seed(implies2, holes, sols);
+                Seed iffseed = new Seed(iff, holes, sols);
+
+                res.add(andseed);
+                res.add(orseed);
+               // res.add(implies1seed);
+               // res.add(implies2eed);
+                res.add(iffseed);
+            }
+        }
+
         return res;
     }
 

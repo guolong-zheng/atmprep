@@ -44,6 +44,11 @@ public class TemplateModelPrinter extends TemplateCommandPrinter {
         sb.append("{\n");
         if(pred.getBody() == null)
             sb.append(" ");
+        else if(pred.getBody().toString().equals("true")){
+            if(pred.getBody() == target){
+                sb = append;
+            }
+        }
         else if(!pred.getBody().toString().equals("true"))
             pred.getBody().accept(this);
         sb.append("}\n");

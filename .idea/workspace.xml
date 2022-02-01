@@ -7,66 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1299e0ff-78b2-465d-b54d-cb1d01237ffc" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.~lock.arepair.txt#" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/arepair.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom11_1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom11_2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom11_4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom11_5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom12.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom13.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom14_1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom14_2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom14_3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom14_4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom14_5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom15.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom1to4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom9.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classroom_8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cv.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/graph.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lts.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/trash.txt" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run.sh" afterPath="$PROJECT_DIR$/scripts/run.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_arepair.sh" afterPath="$PROJECT_DIR$/scripts/run_arepair.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_10.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_10.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_11_1.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_11_1.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_11_2.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_11_2.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_11_3.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_11_3.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_11_4.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_11_4.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_11_5.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_11_5.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_12.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_12.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_13.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_13.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_14.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_14.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_14_1.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_14_1.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_14_2.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_14_2.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_14_3.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_14_3.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_14_5.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_14_5.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_15.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_15.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_1to4.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_1to4.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_5.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_5.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_6.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_6.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_7.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_7.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_8.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_8.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/run_classroom_9.sh" afterPath="$PROJECT_DIR$/scripts/run_classroom_9.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/runcv.sh" afterPath="$PROJECT_DIR$/scripts/runcv.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/rungraph.sh" afterPath="$PROJECT_DIR$/scripts/rungraph.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/runlts.sh" afterPath="$PROJECT_DIR$/scripts/runlts.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/runproduction.sh" afterPath="$PROJECT_DIR$/scripts/runproduction.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/runtrash.sh" afterPath="$PROJECT_DIR$/scripts/runtrash.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/synth/syntaxtemplates/template/seed/SeedGenerator.class" afterPath="$PROJECT_DIR$/target/classes/synth/syntaxtemplates/template/seed/SeedGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/synth/varcollectors/ExprnVarCollector.class" afterPath="$PROJECT_DIR$/target/classes/synth/varcollectors/ExprnVarCollector.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tests/PatcherTest$1.class" afterPath="$PROJECT_DIR$/target/classes/tests/PatcherTest$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tests/PatcherTest$2.class" afterPath="$PROJECT_DIR$/target/classes/tests/PatcherTest$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tests/PatcherTest.class" afterPath="$PROJECT_DIR$/target/classes/tests/PatcherTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tests/TestMetaGen.class" afterPath="$PROJECT_DIR$/target/classes/tests/TestMetaGen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/printers/SeedExprnPrinter.java" afterPath="$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/printers/SeedExprnPrinter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/printers/TemplateModelPrinter.java" afterPath="$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/printers/TemplateModelPrinter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/template/seed/SeedGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/template/seed/SeedGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/synth/varcollectors/ExprnVarCollector.java" afterPath="$PROJECT_DIR$/src/main/java/synth/varcollectors/ExprnVarCollector.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tests/PatcherTest.java" afterPath="$PROJECT_DIR$/src/main/java/tests/PatcherTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tests/TestMetaGen.java" afterPath="$PROJECT_DIR$/src/main/java/tests/TestMetaGen.java" />
     </list>
@@ -93,47 +44,83 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/tests/TestMetaGen.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="224">
-              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="classroom_inv10_18.als" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/benchmark/a4f/classroom/inv10/classroom_inv10_18.als">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="386" column="54" selection-start-line="386" selection-start-column="54" selection-end-line="386" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PatcherTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PatcherTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tests/PatcherTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="179" column="35" selection-start-line="179" selection-start-column="35" selection-end-line="179" selection-end-column="35" />
+            <state relative-caret-position="-670">
+              <caret line="180" column="33" selection-start-line="180" selection-start-column="33" selection-end-line="180" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SeedGenerator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SeedGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/template/seed/SeedGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="289" column="56" selection-start-line="289" selection-start-column="56" selection-end-line="289" selection-end-column="56" />
+            <state relative-caret-position="640">
+              <caret line="312" column="17" selection-start-line="312" selection-start-column="17" selection-end-line="312" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="classroom_inv10_15.als" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/benchmark/a4f/classroom/inv10/classroom_inv10_15.als">
+      <file leaf-file-name="SeedPrinter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/printers/SeedPrinter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="398" column="17" selection-start-line="398" selection-start-column="0" selection-end-line="399" selection-end-column="0" />
+            <state relative-caret-position="160">
+              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+              <folding>
+                <element signature="e#385#386#0" expanded="true" />
+                <element signature="e#417#418#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TemplateModelPrinter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/printers/TemplateModelPrinter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="512">
+              <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+              <folding>
+                <element signature="e#272#273#0" expanded="true" />
+                <element signature="e#304#305#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TemplateCommandPrinter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/printers/TemplateCommandPrinter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3168">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExprnVarCollector.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/synth/varcollectors/ExprnVarCollector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-800">
+              <caret line="51" column="59" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bst_missing.als" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/benchmark/bst_missing.als">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -152,17 +139,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/runcv.sh" />
-        <option value="$PROJECT_DIR$/run.sh" />
         <option value="$PROJECT_DIR$/finder/compare/InstanceGenerator.java" />
         <option value="$PROJECT_DIR$/runlts.sh" />
         <option value="$PROJECT_DIR$/production.sh" />
         <option value="$PROJECT_DIR$/runtrash.sh" />
-        <option value="$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/printers/SeedExprnPrinter.java" />
         <option value="$PROJECT_DIR$/finder/parser/ast/Opens.java" />
         <option value="$PROJECT_DIR$/src/main/java/synth/ASolution.java" />
         <option value="$PROJECT_DIR$/finder/parser/ast/AModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/printers/TemplateModelPrinter.java" />
         <option value="$PROJECT_DIR$/runproduction.sh" />
         <option value="$PROJECT_DIR$/src/main/java/synth/RelationExprSynthesizer.java" />
         <option value="$PROJECT_DIR$/finder/parser/ast/ExprnCall.java" />
@@ -200,7 +183,11 @@
         <option value="$PROJECT_DIR$/benchmark/test.als" />
         <option value="$PROJECT_DIR$/finder/parser/visitor/SliceVisitor.java" />
         <option value="$PROJECT_DIR$/benchmark/illustrative.als" />
+        <option value="$PROJECT_DIR$/benchmark/bst_missing.als" />
         <option value="$PROJECT_DIR$/src/main/java/tests/TestMetaGen.java" />
+        <option value="$PROJECT_DIR$/src/main/java/synth/varcollectors/ExprnVarCollector.java" />
+        <option value="$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/printers/SeedExprnPrinter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/printers/TemplateModelPrinter.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/PatcherTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/template/seed/SeedGenerator.java" />
       </list>
@@ -260,6 +247,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="atmprep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atmprep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atmprep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="benchmark" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -601,7 +602,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="3375" height="1416" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -615,7 +616,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14755556" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14755556" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30861422" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -649,86 +650,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/benchmark/arepair/student18_3.als">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-672">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/benchmark/arepair/student19_2.als">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-480">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/benchmark/arepair/student2_2.als">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1632">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/benchmark/arepair/student3_2.als">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-468">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/benchmark/arepair/student4.als">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-96">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/benchmark/arepair/student6_1.als">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/benchmark/arepair/student9.als">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-864">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/benchmark/arepair/arr1.als">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/benchmark/arepair/dll2_2.als">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1248">
-          <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/benchmark/arepair/dll3_1.als">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-756">
-          <caret line="17" column="72" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/benchmark/arepair/student8.als">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-288">
@@ -897,33 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/printers/TemplateModelPrinter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="6" column="66" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
-          <folding>
-            <element signature="e#272#273#0" expanded="false" />
-            <element signature="e#304#305#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/synth/varcollectors/VarCollector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="44" column="46" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/synth/varcollectors/ExprnVarCollector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="47" column="13" selection-start-line="44" selection-start-column="12" selection-end-line="47" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/finder/tests/Locator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -936,22 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="548">
           <caret line="79" column="9" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/benchmark/arepair/balancedBST2_3.als">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/benchmark/illustrative.als">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -996,14 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/benchmark/a4f/classroom/inv10/classroom_inv10_15.als">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="398" column="17" selection-start-line="398" selection-start-column="0" selection-end-line="399" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classroom.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -1028,22 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tests/TestMetaGen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tests/PatcherTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="179" column="35" selection-start-line="179" selection-start-column="35" selection-end-line="179" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/arepair.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -1052,10 +906,160 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/benchmark/a4f/classroom/inv10/classroom_inv10_15.als">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="398" column="17" selection-start-line="398" selection-start-column="0" selection-end-line="399" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/benchmark/arepair/balancedBST2_2.als">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1248">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/benchmark/arepair/balancedBST2_3.als">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1090">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/benchmark/arepair/balancedBST3_1.als">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1344">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/benchmark/arepair/balancedBST3_2.als">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1248">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/benchmark/arepair/balancedBST1.als">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="68" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="79" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/benchmark/illustrative.als">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/benchmark/arepair/balancedBST2_1.als">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1652">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/benchmark/bst_missing.als">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/printers/SeedExprnPrinter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-586">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/synth/varcollectors/VarCollector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/synth/varcollectors/ExprnVarCollector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-800">
+          <caret line="51" column="59" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/printers/TemplateCommandPrinter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3168">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/printers/TemplateModelPrinter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+          <folding>
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/template/seed/Seed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="57" column="11" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/printers/SeedPrinter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding>
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tests/TestMetaGen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/synth/syntaxtemplates/template/seed/SeedGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="289" column="56" selection-start-line="289" selection-start-column="56" selection-end-line="289" selection-end-column="56" />
+        <state relative-caret-position="640">
+          <caret line="312" column="17" selection-start-line="312" selection-start-column="17" selection-end-line="312" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tests/PatcherTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-670">
+          <caret line="180" column="33" selection-start-line="180" selection-start-column="33" selection-end-line="180" selection-end-column="33" />
           <folding />
         </state>
       </provider>

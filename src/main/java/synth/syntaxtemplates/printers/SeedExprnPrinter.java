@@ -124,12 +124,6 @@ public class SeedExprnPrinter extends SeedPrinter {
         for(StringBuilder sb : results)
             sb.append(expr.op);
         expr.right.accept(this);
-
-            for(StringBuilder sb : results)
-                if(sb.toString().contains("some (c . parts"))
-                    check = true;
-
-
     }
 
     @Override
